@@ -1,0 +1,24 @@
+
+# Vault as Personalized Learning
+
+## The Connection
+The vault is the argument and the demonstration at the same time. Writing develops and articulates the case for this kind of system; teaching designs and builds it. Neither domain can complete the project alone.
+
+## Domain A — Writing
+This is something to write about and advocate for. The argument: that a local, self-profiling knowledge system — one that learns the shape of *your* curiosity, not the shape of what's extractable from you — is both possible and important. The vault is the proof of concept. The writing makes the argument legible to others.
+
+## Domain B — Teaching
+This is a design problem. What does it mean to build a learning system that meets students where they're at rather than harvesting them for an external profile? The LilPAIPer critique (Jim White, 2026-03-07) makes the failure mode concrete: a tutoring system that brings personal AI to the student but only ever reflects the tutor's ideas, never learning the student's shape.
+
+The aspiration: eccentric learning paths that reconcile with formal pathing where necessary — locally owned, self-profiling, eventually encrypted and protected.
+
+## The Synthesis
+The vault itself is the proof of concept. It accumulates a self-profile — interests, connections, patterns of attention — without harvesting it to an external service. Writing about this and building it are the same project. The vault as personalized learning system is both the argument and the thing being argued for.
+
+## Implications
+- **Local over external:** The goal is a system that builds a profile of the learner from within, not from surveillance or extraction. This is a design principle as much as a privacy concern.
+- **Eccentric paths:** Learning that starts from genuine curiosity and wanders before converging — not remediated toward a standard track from the start, but capable of reconciling with formal requirements when needed.
+- **Vault topology as learning profile:** Ways of traversing a vault (or knowledge graph) that surface a writing style, a taste, a sensibility for ideas. This is an innovation opportunity. See journal/2026-03-09.
+- **Future:** Encryption and protection as a later consideration once the basic architecture is understood.
+
+

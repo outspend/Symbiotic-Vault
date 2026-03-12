@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "file",
+      "file": "_atoms/atom-name.md",
+      "x": 0,
+      "y": 0,
+      "width": 250,
+      "height": 60
+    },
+    {
+      "id": "2",
+      "type": "file",
+      "file": "_atoms/related-atom.md",
+      "x": 320,
+      "y": 0,
+      "width": 250,
+      "height": 60
+    },
+    {
+      "id": "3",
+      "type": "text",
+      "text": "annotation or frame label",
+      "x": 160,
+      "y": -100,
+      "width": 200,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "1",
+      "toNode": "2",
+      "label": "connection type"
+    },
+    {
+      "id": "e2",
+      "fromNode": "3",
+      "toNode": "1",
+      "label": ""
+    }
+  ]
+}

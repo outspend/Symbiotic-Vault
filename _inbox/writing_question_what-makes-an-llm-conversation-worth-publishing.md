@@ -1,0 +1,22 @@
+
+# What makes an LLM conversation worth publishing?
+
+## Why This Question
+A meeting in March 2026 surfaced the idea of publishing LLM conversations as Jupyter notebooks to a shared wiki. The form is plausible — technically, logistically — but the curatorial question hasn't been answered: what distinguishes a conversation worth putting in front of readers from noise? The vocabulary for the thing keeps shifting (repo, deliverable, knowledge unit), which suggests the *form* isn't settled either.
+
+## What I Currently Think
+Something about the exchange has to be doing work that a conventional essay or document wouldn't do. The back-and-forth needs to be *the point*, not just the method. Maybe: a good published conversation makes the AI's moves visible in a way that's interesting rather than just procedural.
+
+## Approaches to Investigate
+- Try publishing one — see what decisions arise in practice
+- Look at what Jim's wiki structure actually accepts and constrains
+- Consider: what makes a *human* conversation worth publishing? (Interviews, Socratic dialogues, letters) — what transfers?
+- The Data Center Classics experiment as a test case: a conversation-as-performance that earns its publication by being a distinct artifact
+
+## Evidence & Findings
+<!-- Update as the project develops -->
+
+## Related Questions
+- What is the right *name* for this kind of object? (repo / deliverable / knowledge unit — the search continues)
+- Can a published conversation be a cartridge for other media — song, image, video?
+

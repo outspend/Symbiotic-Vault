@@ -1,0 +1,36 @@
+
+# Highlights and Hides
+
+## Definition
+A prompting method for exposing epistemic framing: asking an LLM to identify what a given representational mode, metaphor, or argument puts forward ("highlights") and what it suppresses or marginalizes ("hides"). Named after a formulation from a conversation about *Metaphors We Live By*.
+
+## Why It Matters
+LLMs can generate coherent, fluent content about almost anything. When what is *right* is elusive or contested, identifying the contractual boundaries of a framing — its built-in biases, what it foregrounds and what it sweeps away — becomes the next best thing to ground truth. This is increasingly a critical literacy skill, and a teachable one.
+
+> "Every representational mode has a profile of attention — some things forward, other things swept away." — journal, 2026-03-09
+
+## Core Idea
+Every framing is a contract. The contract decides what counts as evidence, what's visible, what's peripheral. The "highlights and hides" prompt makes that contract legible by asking the model to describe both dimensions explicitly: what does this way of seeing bring into focus, and what does it structurally obscure?
+
+The method works on:
+- A metaphor ("argument is war" — highlights: combat, winners, losers; hides: understanding, exploration, joint inquiry)
+- An LLM response about a contested topic (what frame is organizing this answer?)
+- A representational mode (what does a spreadsheet highlight vs. hide about a problem?)
+- A narrative structure (what does a hero's journey foreground vs. flatten?)
+
+## Key Distinctions
+- **Highlights and hides vs. hallucination detection:** This method is not about factual error. It's about structural bias — the way any frame necessarily puts some things in and leaves others out. A perfectly accurate account can still have a misleading highlights-and-hides profile.
+- **Highlights and hides vs. bias auditing:** More active and generative than a bias audit. The goal isn't to flag bad framing but to surface the implicit assumptions of *any* framing, including good ones.
+
+## Examples
+- Ask: "What does the 'argument is war' metaphor highlight about disagreement, and what does it hide?" — surfaces the adversarial assumption built into everyday argumentative language.
+- Ask: "In your response just now, what frame are you using, and what does that frame highlight and hide?" — turns the method reflexively onto the model's own output.
+- Applying it to LLM outputs about contested topics (AI safety, political economy, pedagogy) to expose organizing assumptions before accepting or pushing back.
+
+## Questions This Opens
+- What's the best prompt formulation? (Current: "What does X highlight and hide?" — simple, but other framings may surface more.)
+- Can this scale into a curriculum unit? What's the right entry point for students encountering this for the first time?
+- Does the method work better on metaphors, arguments, or data representations? Or equally across all three?
+- What's the relationship between this method and rhetorical analysis? Is it a simplified version, or does it do something different?
+
+
