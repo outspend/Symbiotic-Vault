@@ -44,7 +44,7 @@ or "frame-read [frame-name]."
 - `_atoms/` — all atoms (traversed through the frame's lens)
 - `_journal/` entries — only when following provenance links from atoms,
   to understand origin and context. Does not scan the stream directly.
-- `_projects/*/_BRIEF.md` — to see which atoms are being assembled toward
+- `_projects/*/brief-*.md` — to see which atoms are being assembled toward
   what ends. Does not read notes/ or drafts/ (human surfaces).
 - `_memory/` — past reflections tagged with this frame, to notice
   development over time
@@ -76,7 +76,7 @@ or "frame-read [frame-name]."
 4. For atoms with relevant connections, follow provenance links to
    `_journal/` entries to understand origin and context where needed.
 
-5. Read active project briefs (`_projects/*/_BRIEF.md`) to see if any
+5. Read active project briefs (`_projects/*/brief-*.md`) to see if any
    projects are assembling atoms this frame cares about.
 
 6. Compose a reflection structured as:

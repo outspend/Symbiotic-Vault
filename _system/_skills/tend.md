@@ -49,8 +49,8 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 **Does not:**
 - Modify stream entries, inbox items, or any human surface
 - Modify project briefs, notes, or drafts
-- Modify or delete the prose body of existing atoms (only frontmatter
-  and links)
+- Modify or delete the prose body of existing atoms (only frontmatter,
+  wikilinks, aliases, and the `## Relations` section)
 - Activate proposed frames (that's the human's decision)
 
 ## Procedure
@@ -59,8 +59,11 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 1. Read all atoms. Build a mental map of concepts, links, and tags.
 2. Identify atoms that share concepts but don't link to each other.
-   For each proposed new link:
-   a. Add the `[[wikilink]]` to both atoms.
+   For each proposed new connection:
+   a. Append to the `## Relations` section of both atoms:
+      `- [[the-other-atom]]: one sentence describing the relationship
+      (supports, challenges, extends, instantiates, etc.)`.
+      If an atom predates the Relations section, add the section first.
    b. Note the connection and rationale in the memory entry.
 3. Review atom status:
    - `seed` → `developing`: atom has 3+ inbound/outbound links,

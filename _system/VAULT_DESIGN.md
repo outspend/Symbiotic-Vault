@@ -104,7 +104,7 @@ Agent maintains here:       Human browses, never edits
 Shared:
   HOME.md                   (human zones + agent-refreshable zones)
   _frames/ (active)         (user-created or user-activated)
-  _projects/*/_BRIEF.md     (user-written, agent helps draft)
+  _projects/*/brief-[slug].md  (user-written, agent helps draft)
 
 Generated on demand:
   .canvas files             (visual maps from conversational collaboration)
@@ -142,7 +142,7 @@ vault/
 ├── _frames/                 # Perspective definitions (lenses, not territories)
 ├── _projects/               # Active + completed works
 │   └── project-name/
-│       ├── _BRIEF.md        # Intent, audience, divisions, status
+│       ├── brief-[slug].md  # Intent, audience, divisions, status
 │       ├── notes/           # Generative thinking per division (human surface)
 │       └── drafts/          # Composed writing per division (human surface)
 └── _memory/                 # Run logs, reflections, collaboration traces
@@ -173,7 +173,7 @@ created by the user or proposed by the tend skill.
 
 **`_projects/`** — Active trajectories toward specific works. Each project
 has three components:
-- `_BRIEF.md` — defines intent, audience, and divisions
+- `brief-[slug].md` — defines intent, audience, and divisions
 - `notes/` — generative thinking per division (brainstorming, explorations
   with the agent, reflections)
 - `drafts/` — composed writing per division (actual prose becoming the work)
@@ -204,7 +204,8 @@ assembled when a project completes.
 ---
 type: atom
 id: unique-slug
-kind: concept | method | question | person | reference | event
+aliases: []          # alternate names — prevents synonym splitting
+kind: concept | claim | method | question | person | reference | event
 status: seed | developing | stable | archived
 created: YYYY-MM-DD
 source:
@@ -215,7 +216,16 @@ frames: []           # which frames have claimed or referenced this atom
 ---
 ```
 
-Body contains prose and `[[wikilinks]]` to other atoms.
+Body contains prose. A `## Relations` section follows a `---` divider
+at the end of every atom. Each entry: `[[wikilink]]: one sentence
+describing the epistemic relationship (supports, challenges, extends,
+instantiates, etc.)`. Tend appends to this section; atomize writes
+initial entries at creation. Relations are human-readable and
+structured enough to be parsed into typed graph edges later.
+
+**`kind: concept` vs. `kind: claim`** — a concept is descriptive and
+stable; a claim is positioned and arguable. Claims almost always
+reference a concept and become two linked atoms.
 
 ### Frame Schema
 
@@ -334,6 +344,20 @@ Every skill declares an access tier for each resource it touches:
    graph databases, and multi-agent orchestration are noted as extension
    points, not requirements.
 
+8. **Research-informed schema choices.** The atom schema includes
+   `aliases` for entity resolution, `claim` as a kind to capture
+   arguable positions alongside descriptive concepts, and a
+   `## Relations` section where epistemic relationships are described
+   in natural language. These choices are informed by discourse graph
+   research (Joel Chan), Knowledge Synthesis Graphs, and argumentation
+   theory. They preserve the option for typed-edge graph integration
+   later without requiring that infrastructure now. The vault's
+   deliberate asymmetry — human writes prose, agent maintains graph,
+   tend bridges with judgment — is a design choice, not a limitation.
+   Research confirms bidirectional sync remains an unsolved problem;
+   loose coupling via LLM judgment is better suited to a single
+   creative practitioner.
+
 ---
 
 ## Extension Points (Not Yet Built)
@@ -353,3 +377,8 @@ Every skill declares an access tier for each resource it touches:
 - **Autonomous scheduling:** Skills currently require human invocation.
   When trust and tooling allow, some skills (especially tend) could
   run on a schedule.
+
+---
+
+
+

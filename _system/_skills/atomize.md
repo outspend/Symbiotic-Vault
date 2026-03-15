@@ -59,12 +59,20 @@ provenance.
       but do not create a duplicate. If the source uses a name for that
       concept that isn't yet in the atom's `aliases:`, flag it in the
       memory entry as a candidate alias for tend to confirm.
-   b. Create a new file in `_atoms/` using the atom template.
-   c. Set `status: seed`.
-   d. Set `source:` to the stream entry or inbox item it came from.
-   e. Write a brief prose body capturing the core idea.
-   f. Add `[[wikilinks]]` to any related atoms (new or existing).
-   g. Suggest initial `tags:` based on the content.
+   b. Assess whether the concept is a *concept* (descriptive, stable)
+      or a *claim* (positioned, arguable). Set `kind:` accordingly.
+      If a claim references a concept that doesn't yet have its own
+      atom, identify both — create each separately and link them.
+   c. Create a new file in `_atoms/` using the atom template.
+   d. Set `status: seed`.
+   e. Set `source:` to the stream entry or inbox item it came from.
+   f. Write a brief prose body capturing the core idea.
+   g. Identify related atoms (new or existing) to connect to.
+   h. Write the `## Relations` section. For each related atom from
+      step g, add one entry: `- [[atom-slug]]: one sentence describing
+      the epistemic relationship`. Not "connects to" — be precise:
+      supports, challenges, extends, instantiates, is a case of, etc.
+   i. Suggest initial `tags:` based on the content.
 6. If an inbox item has frontmatter, add `processed: true` to it.
 7. Write a memory entry to `_memory/` with:
    - What sources were scanned

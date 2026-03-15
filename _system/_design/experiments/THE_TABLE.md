@@ -94,7 +94,7 @@ These are concrete steps for a Claude Code session. Read
 
 If the project doesn't exist yet, help the user create it:
 1. Create `_projects/[project-name]/`
-2. Create `_BRIEF.md` with intent and audience only. Leave the
+2. Create `brief-[project-name].md` with intent and audience only. Leave the
    Divisions section as: `Structure to be discovered via the table.`
 3. Create `drafts/` — the user will populate this with fragments
 

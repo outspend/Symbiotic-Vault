@@ -12,14 +12,19 @@ updated: 2026-03-10
 
 This vault reconciles a creative practice of ideation, research, and
 development with an agentic ecosystem. It is a shared environment
-where human creativity and agentic activity sustain each other.
+that entangles human creativity and agentic activity -
 The ideas within become the focus, context, and concern of the agents therein.
+Serendipity by design.
 
 ### Cohabitation
 The vault is a symbiotic space. Ideas are the energy input. Agents
 maintain the structure and are sustained — or even created — by its
 contents. Human and agent each have their own surfaces, their own
-rhythms, their own work. Neither displaces the other.
+rhythms, their own work. Neither displaces the other.  
+
+The human's raw surfaces are protected because unstructured
+thinking is where ideas originate. Structure serves ideas; ideas
+do not serve structure.
 
 ### Provenance
 The lineage of ideas is preserved and traceable. Random becomes rough

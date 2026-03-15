@@ -18,16 +18,9 @@ completed:
 
 ## Divisions
 
-<!-- Define the named parts of this work and their scope.
-     Each division maps to files in notes/ and drafts/.
-     Example:
-
-     ### Chapter One: [Title]
-     Scope: What this division covers.
-
-     ### Chapter Two: [Title]
-     Scope: What this division covers.
--->
+<!-- Named parts of the work. Agent scaffolds a note + draft file
+     for each division when the division is named — either at brief
+     creation or when added later. -->
 
 ## Open Decisions
 
