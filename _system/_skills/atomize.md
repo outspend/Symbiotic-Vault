@@ -37,7 +37,7 @@ provenance.
 - Adds `processed: true` to inbox item frontmatter (if frontmatter exists)
 
 **Does not:**
-- Modify stream entries (ever)
+- Modify journal entries (ever)
 - Modify existing atoms
 - Create frames or projects
 

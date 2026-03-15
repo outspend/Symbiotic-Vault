@@ -57,7 +57,7 @@ or "frame-read [frame-name]."
 **Does not:**
 - Create or modify atoms
 - Create or modify frames
-- Modify stream entries or any human surface
+- Modify journal entries or any human surface
 - Write outside `_memory/` and the designated HOME.md zone
 
 ## Procedure
@@ -122,7 +122,7 @@ or "frame-read [frame-name]."
 - **Depth vs. breadth:** If the frame intersects with many atoms,
   prioritize depth on the most active or most connected ones rather
   than mentioning everything superficially.
-- **Provenance chasing:** Follow links to the stream only when the
+- **Provenance chasing:** Follow links to the journal only when the
   atom's content is ambiguous or underdeveloped and the original
   context would illuminate it. Don't read every source for every atom.
 - **Cross-frame notes:** Be sparing. Only note cross-frame relevance

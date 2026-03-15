@@ -127,12 +127,15 @@ vault/
 │   ├── _skills/
 │   │   ├── atomize.md
 │   │   ├── tend.md
-│   │   └── frame-read.md
+│   │   ├── frame-read.md
+│   │   └── trace.md
 │   └── _templates/
 │       ├── atom.md
 │       ├── canvas.canvas
+│       ├── capture.md
 │       ├── draft.md
 │       ├── frame.md
+│       ├── journal.md
 │       ├── project-brief.md
 │       └── project-note.md
 ├── _inbox/                  # Raw capture — quick ideas, links, clippings
@@ -258,6 +261,36 @@ completed:           # set when all division drafts reach final status
 Body contains: intent, audience, divisions (named sections with scope),
 open decisions, current focus. A completed project's finished work is
 the final state of its `drafts/` folder.
+
+### Draft Schema
+
+```yaml
+---
+type: draft
+project: project-slug
+division: division-slug
+status: wip | final
+---
+```
+
+Body contains composed writing — the actual prose of the work. Human surface:
+agent reads but never modifies. Nav header links to `brief-[slug]` and the
+corresponding note. A draft reaches `status: final` when it's complete; when
+all division drafts are final, the project brief status changes to `completed`.
+
+### Project Note Schema
+
+```yaml
+---
+type: project-note
+project: project-slug
+division: division-slug
+---
+```
+
+Body contains generative thinking — brainstorming, explorations, reflections,
+notes from agent collaboration. Human surface: agent reads but never modifies.
+Notes inform drafts but do not become them; both remain as provenance.
 
 ### Memory Entry Schema
 

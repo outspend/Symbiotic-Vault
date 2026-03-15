@@ -87,15 +87,15 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ### Part 2: Harvest from Projects
 
-5. Read active project notes in `_projects/*/notes/` and drafts in
+6. Read active project notes in `_projects/*/notes/` and drafts in
    `_projects/*/drafts/`.
-6. Identify ideas that have value beyond the project — concepts that
+7. Identify ideas that have value beyond the project — concepts that
    could serve other projects, frames, or future work.
-7. Tend matches semantically: it reads prose and recognizes concepts
+8. Tend matches semantically: it reads prose and recognizes concepts
    worth atomizing regardless of whether the user flagged them with a
    wikilink or just wrote them in a sentence. A wikilink and an
    unlinked reference to the same concept are the same signal.
-8. For each harvested concept, create a new atom in `_atoms/` with:
+9. For each harvested concept, create a new atom in `_atoms/` with:
    - `status: seed`
    - `source:` pointing to the project note or draft
    - Wikilinks to related atoms
@@ -103,9 +103,9 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ### Part 3: Propose Frames
 
-9. Look for atom clusters: groups of 4+ atoms with dense cross-linking
-   and a coherent shared concern not already captured by an existing frame.
-10. For each cluster that meets this threshold:
+10. Look for atom clusters: groups of 4+ atoms with dense cross-linking
+    and a coherent shared concern not already captured by an existing frame.
+11. For each cluster that meets this threshold:
     a. Create a frame file in `_frames/` with `status: proposed`.
     b. Set `proposed_by: tend` and list the `seed_atoms:`.
     c. Write a frame body describing the perspective, concerns, and
@@ -114,7 +114,7 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ### Part 4: Log
 
-11. Write a memory entry to `_memory/` with:
+12. Write a memory entry to `_memory/` with:
     - Links added (which atoms, why)
     - Status promotions (which atoms, why)
     - Atoms harvested from project notes/drafts
