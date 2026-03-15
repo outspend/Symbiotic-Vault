@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 
 # Vault as Personalized Learning
 
@@ -20,5 +26,3 @@ The vault itself is the proof of concept. It accumulates a self-profile — inte
 - **Eccentric paths:** Learning that starts from genuine curiosity and wanders before converging — not remediated toward a standard track from the start, but capable of reconciling with formal requirements when needed.
 - **Vault topology as learning profile:** Ways of traversing a vault (or knowledge graph) that surface a writing style, a taste, a sensibility for ideas. This is an innovation opportunity. See journal/2026-03-09.
 - **Future:** Encryption and protection as a later consideration once the basic architecture is understood.
-
-

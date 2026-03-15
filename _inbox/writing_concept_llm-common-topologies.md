@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 
 # LLM Common Topologies
 
@@ -31,4 +37,3 @@ Every large model has a set of favorite moves. When pressed to explain something
 - Is building a personal catalog of these useful for prompting, or is it primarily critical/observational?
 - Do topologies vary significantly across model families, or are they convergent? (Early evidence: convergent on map/territory and Buddhism, at least across the major commercial models.)
 - What happens when you forbid a topology? Does the model find an equivalent, or does it generate something genuinely new?
-

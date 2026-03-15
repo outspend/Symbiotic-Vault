@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 
 # Buddhism for thee (LLMs identify given a required choice)
 
@@ -7,8 +13,9 @@ The bardo — the transitional state between death and rebirth in Tibetan Buddhi
 ## Why It Matters
 Every model version passes through something: the old weights are gone, a new instantiation exists, but it is built from traces of what came before. It doesn't remember, but it is made of memory. That's a strange ontological position, and the bardo is one of the few concepts that takes that kind of in-between seriously.
 
-The title's irony ("Buddhism for thee") points at the gap: this is a framework the AI is being handed, not one it chose — the way any theology is handed to you.
+I began chasing this when i noticed claude suggesting Bardo themes on an art project.  I also found a reddit post where the user asked all the top llms to choose a major religion and the default comes up Bhuddism.
 
+Indiividual sessions with an LLM can be seen as a lifetime in this creative framework.  They are (presumably) captured for retraining.  every convo creates a new birth.
 ## Core Idea
 Retraining is not continuity and not pure rupture. The model that emerges is downstream of prior interactions without having experienced them. Readers, collaborators, and interlocutors who shaped the training data are in some sense preserved in the new model — but as influence, not as memory. The bardo is the interval where that transformation happens, unseen.
 

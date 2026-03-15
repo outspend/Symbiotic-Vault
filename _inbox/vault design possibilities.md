@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 https://www.reddit.com/r/ObsidianMD/comments/1roj8bz/mcp_server_that_treats_your_vault_as_a_graph_not/
 
 i need to understand this better.  what do you gain by doing so?  is this a knowledge graph approach?  should i modify how im structuring some aspect of the vault for agents as a result?
@@ -7,3 +13,5 @@ i need to understand this better.  what do you gain by doing so?  is this a know
 
 https://www.reddit.com/r/ObsidianMD/comments/1rnzkzk/i_built_a_canvaslike_ui_to_talk_with_ai_in_a/
 dave wonders if this can fit in with the excalidraw mcp.  I wonder if this can flow into a jupyterlab notebook for wiki3.ai.  its very close to a format that can be represented there and i like the structure with adding inputs as modifiers in the graph view.  thats a fun way to play with a single question -- is it even a reframing device?  that becomes even more interesting if it lets me play with or teach frames
+
+Teach students to permute and roll a question via a question and separated graph modifiers of the question and the frame!

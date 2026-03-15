@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 
 # Highlights and Hides
 
@@ -32,5 +38,3 @@ The method works on:
 - Can this scale into a curriculum unit? What's the right entry point for students encountering this for the first time?
 - Does the method work better on metaphors, arguments, or data representations? Or equally across all three?
 - What's the relationship between this method and rhetorical analysis? Is it a simplified version, or does it do something different?
-
-

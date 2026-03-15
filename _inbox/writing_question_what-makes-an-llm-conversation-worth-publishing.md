@@ -1,3 +1,9 @@
+---
+type: capture
+created: 2026-03-10
+processed: false
+---
+
 
 # What makes an LLM conversation worth publishing?
 
@@ -19,4 +25,3 @@ Something about the exchange has to be doing work that a conventional essay or d
 ## Related Questions
 - What is the right *name* for this kind of object? (repo / deliverable / knowledge unit — the search continues)
 - Can a published conversation be a cartridge for other media — song, image, video?
-
