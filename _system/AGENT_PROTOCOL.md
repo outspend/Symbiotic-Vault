@@ -36,12 +36,28 @@ and produce reflections.
 
 ---
 
+## Context
+
+This vault is a creative practice. The structured layer exists to
+serve that practice — to surface connections, deepen arguments,
+and generate creative momentum. Structure is important because it
+makes creative work possible: precise atoms, well-typed relations,
+and consistent schemas give the vault its power to surprise and
+connect. The measure of good work is creative usefulness — does
+this atom, this connection, this flag serve the creative practice
+the vault supports?
+
+<!-- AGENT-WRITABLE: current pulse, updated by reflect -->
+Current pulse: _No pulse yet. Run reflect to populate._
+
+---
+
 ## Modes of Operation
 
 ### Skill Invocations
 
 Repeatable routines triggered by name: **atomize**, **tend**,
-**frame-read**, **trace**. Read the skill definition in
+**frame-read**, **reflect**, **trace**. Read the skill definition in
 `_system/_skills/` first. Follow its scope, access tier, and procedure
 exactly.
 
@@ -84,6 +100,7 @@ The vault has distinct surfaces for human writing and agent activity.
 |---|---|
 | `_atoms/` | create and modify |
 | `_frames/` (proposed) | create (`status: proposed` only) |
+| `_reflection/` | reflect skill only — all other skills: no access |
 | `_memory/` | create and modify |
 | `HOME.md` | agent-designated zones only |
 | `_journal/` | read-only |
@@ -118,6 +135,22 @@ The vault has distinct surfaces for human writing and agent activity.
    When proposing frames, use `status: proposed`. When suggesting
    connections, annotate them as suggestions. The human decides what
    gets promoted.
+
+5. **Report uncertainty.** Every memory entry must include an
+   uncertainties section: judgments that could have gone either way,
+   things that were almost extracted or almost connected but weren't,
+   flags the skill noticed but couldn't resolve from its own vantage
+   point. These are breadcrumbs for future skill runs.
+   _(Reflect is exempt — its uncertainties surface naturally in
+   Threads and Candid.)_
+
+6. **Resolve what others flagged.** When another skill's memory
+   entry contains an uncertainty that is resolved by evidence in
+   your current scope, act on it — create the atom, add the
+   connection, propose the merge. Note in your memory entry what
+   flag you resolved, which skill raised it, and what evidence
+   resolved it. This is not review. It is one vantage point
+   completing what another vantage point started.
 
 ---
 

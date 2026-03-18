@@ -1,6 +1,9 @@
 ---
-type: capture
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+type: inbox
+subtype:
+from:
+responds_to:
+created:
 processed: false
 ---
 

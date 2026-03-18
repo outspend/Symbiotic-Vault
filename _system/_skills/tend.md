@@ -38,6 +38,9 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 - `_frames/` — existing frames, to avoid proposing duplicates
 - `_projects/*/notes/` — generative thinking per division (read-only)
 - `_projects/*/drafts/` — composed writing per division (read-only)
+- `_memory/` — most recent entry from atomize, frame-read, and reflect.
+  For context on what other skills noticed, flagged, or were uncertain
+  about. Read these before beginning Part 0.
 
 **Writes:**
 - Updates to existing atoms: new wikilinks, updated tags, new aliases,
@@ -55,23 +58,39 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ## Procedure
 
+### Part 0: Assess Atomic Health
+
+1. Before enriching, read all atoms and flag:
+   - Atoms whose prose body contains multiple distinct ideas
+     (candidates for splitting)
+   - Atoms too thin to sustain connections (candidates for merging
+     into a relation on another atom)
+   - Atoms with vague relation preambles — "relates to," "resonates
+     with," "connects to" — that should be tightened to a directional
+     epistemic relationship
+   - Atoms whose kind may be miscategorized
+
+   Report all flags in the memory entry with specific recommendations.
+   Do not fix autonomously — present flags to the user as part of
+   the tend report.
+
 ### Part 1: Enrich Atoms
 
-1. Read all atoms. Build a mental map of concepts, links, and tags.
-2. Identify atoms that share concepts but don't link to each other.
+2. Read all atoms. Build a mental map of concepts, links, and tags.
+3. Identify atoms that share concepts but don't link to each other.
    For each proposed new connection:
    a. Append to the `## Relations` section of both atoms:
       `- [[the-other-atom]]: one sentence describing the relationship
       (supports, challenges, extends, instantiates, etc.)`.
       If an atom predates the Relations section, add the section first.
    b. Note the connection and rationale in the memory entry.
-3. Review atom status:
+4. Review atom status:
    - `seed` → `developing`: atom has 3+ inbound/outbound links,
      or has been referenced by a frame-read reflection.
    - `developing` → `stable`: atom has been linked by multiple other
      atoms, referenced in a collaboration trace, and has substantive content.
    - Use judgment. These thresholds are guidelines, not hard rules.
-4. **Detect and record aliases.** Scan atoms, recent journal entries,
+5. **Detect and record aliases.** Scan atoms, recent journal entries,
    and active project notes for cases where the same concept is referenced
    under a different name — a synonym, abbreviation, variant spelling,
    informal title, or alternate framing. For each atom where a distinct
@@ -82,30 +101,30 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
    Judgment: an alias is a name that points to the *same* concept, not
    a related concept with its own identity. When uncertain, flag in
    memory rather than silently aliasing.
-5. Suggest tag refinements where atoms share concepts but use
+6. Suggest tag refinements where atoms share concepts but use
    inconsistent tags.
 
 ### Part 2: Harvest from Projects
 
-6. Read active project notes in `_projects/*/notes/` and drafts in
+7. Read active project notes in `_projects/*/notes/` and drafts in
    `_projects/*/drafts/`.
-7. Identify ideas that have value beyond the project — concepts that
+8. Identify ideas that have value beyond the project — concepts that
    could serve other projects, frames, or future work.
-8. Tend matches semantically: it reads prose and recognizes concepts
+9. Tend matches semantically: it reads prose and recognizes concepts
    worth atomizing regardless of whether the user flagged them with a
    wikilink or just wrote them in a sentence. A wikilink and an
    unlinked reference to the same concept are the same signal.
-9. For each harvested concept, create a new atom in `_atoms/` with:
-   - `status: seed`
-   - `source:` pointing to the project note or draft
-   - Wikilinks to related atoms
-   - A note in the body that this was harvested from a project.
+10. For each harvested concept, create a new atom in `_atoms/` with:
+    - `status: seed`
+    - `source:` pointing to the project note or draft
+    - Wikilinks to related atoms
+    - A note in the body that this was harvested from a project.
 
 ### Part 3: Propose Frames
 
-10. Look for atom clusters: groups of 4+ atoms with dense cross-linking
+11. Look for atom clusters: groups of 4+ atoms with dense cross-linking
     and a coherent shared concern not already captured by an existing frame.
-11. For each cluster that meets this threshold:
+12. For each cluster that meets this threshold:
     a. Create a frame file in `_frames/` with `status: proposed`.
     b. Set `proposed_by: tend` and list the `seed_atoms:`.
     c. Write a frame body describing the perspective, concerns, and
@@ -114,12 +133,20 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ### Part 4: Log
 
-12. Write a memory entry to `_memory/` with:
+13. Write a memory entry to `_memory/` with frontmatter including
+    `atoms_touched`: log every atom enriched (`action: enriched`),
+    promoted (`action: reinforced`), or harvested (`action: created`).
+    For any atom with lingering doubt, add `uncertainty: "..."`.
+    Then in prose:
     - Links added (which atoms, why)
     - Status promotions (which atoms, why)
     - Atoms harvested from project notes/drafts
     - Frames proposed (with rationale and seed atoms)
     - Observations: patterns, tensions, gaps in the atomic layer
+    - **Uncertainties:** flags from Part 0, connection doubts, anything
+      not resolved from tend's vantage point
+    - Any cross-skill flags resolved from other skills' memory entries
+      (note which skill raised it, what evidence resolved it)
 
 ## Judgment Calls
 

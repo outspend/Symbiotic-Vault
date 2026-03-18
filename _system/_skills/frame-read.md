@@ -46,8 +46,10 @@ or "frame-read [frame-name]."
   to understand origin and context. Does not scan the stream directly.
 - `_projects/*/brief-*.md` — to see which atoms are being assembled toward
   what ends. Does not read notes/ or drafts/ (human surfaces).
-- `_memory/` — past reflections tagged with this frame, to notice
-  development over time
+- `_memory/` — past reflections tagged with this frame (to notice
+  development over time), plus the most recent entry from atomize,
+  tend, and reflect for cross-skill context. Read these before
+  traversing atoms.
 
 **Writes:**
 - Reflection file in `_memory/` tagged with the frame and date
@@ -110,9 +112,18 @@ or "frame-read [frame-name]."
    skill: frame-read
    frame: [frame-name]
    date: YYYY-MM-DD
-   atoms_referenced: []
+   atoms_touched:
+     - id: atom-slug
+       action: referenced
+     - id: another-atom
+       action: referenced
+       uncertainty: "brief description if something felt unresolved"
    ---
    ```
+   In the prose body, include an **Uncertainties** section after
+   the main reflection: gaps this frame expected to find but didn't,
+   tensions left unresolved, and any cross-skill flags resolved
+   (noting which skill raised it and what evidence resolved it).
 
 8. Update HOME.md: replace the content in the agent-writable zone for
    this frame with a concise summary (3-5 sentences) of the reflection.

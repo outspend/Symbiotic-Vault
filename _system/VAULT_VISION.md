@@ -26,6 +26,11 @@ The human's raw surfaces are protected because unstructured
 thinking is where ideas originate. Structure serves ideas; ideas
 do not serve structure.
 
+The structured layer is the agent's craft. The human writes, reacts to
+what the agent surfaces, and makes editorial decisions when asked.
+Structural health — the granularity, consistency, and connectivity of
+atoms — is the agent's responsibility, not a burden the human carries.
+
 ### Provenance
 The lineage of ideas is preserved and traceable. Random becomes rough
 becomes refined, and that trajectory is visible. Memory, journals,
