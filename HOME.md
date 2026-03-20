@@ -105,7 +105,7 @@ SORT file.mtime ASC
 
 <!-- BEGIN AGENT ZONE: agent-reflection -->
 
-**2026-03-10** — Inaugural reflection covering the full first week (Mar 2–10). The archive holds a cluster of serious projects — publishing form, LLM topologies, highlights-and-hides, personalized learning, bardo/simulacrum — running as one undifferentiated interest, not yet separated. The vocabulary instability around "repo/deliverable/knowledge unit" is diagnostic: the form of a published LLM conversation is still unsettled. The constraint game conversation (forbid "map vs. territory") may already be publishable. Bardo and simulacrum are running together and need to be distinguished. Highlights-and-hides is the most immediately teachable thing here. Five threads open.
+**2026-03-19** — Three Reddit threads: a Commonplace Garden post for HSPs, the aipsychosis.watch archive, and Bernie Sanders interviewing Claude on video. The Commonplace Garden post is a useful contrast to this vault's design — the vault's inbox/reflect pipeline addresses the same anxiety, but through a different mechanism (delegate and defer rather than keep-entry-as-unit). The psychosis archive drew a predictable apologist taxonomy in its comment thread (deflection by counter-accounting, victim-attribution, statistical minimization). The Bernie video is political communication masquerading as an AI encounter — the production values are the tell, the sycophantic fold at the end is the evidence. The pedagogical argument for your creative use is now the clearest it's been: visible seams teach the question the Bernie video suppresses.
 
 <!-- END AGENT ZONE: agent-reflection -->
 
@@ -140,7 +140,7 @@ _No frame reflections yet. Run `frame-read [frame-name]` to populate._
 
 <!-- BEGIN AGENT ZONE: momentum -->
 
-_No momentum signals yet. Run reflect to populate._
+**ai-conversational-writing** is gaining traction. The Bernie video provides the clearest external anchor yet for the core argument: AI conversation as political prop vs. AI conversation as critical/creative form with visible seams. The pedagogical distinction is now articulable as a thesis. This project has recurred across multiple journal entries, attracted a concrete counter-example (the Sanders video), and the publishing question is narrowing toward a specific claim — not just "LLM conversations can be published" but "visible seams are the thing that earns publication."
 
 <!-- END AGENT ZONE: momentum -->
 

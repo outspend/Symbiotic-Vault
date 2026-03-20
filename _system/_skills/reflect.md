@@ -12,6 +12,7 @@ access_summary:
   _projects: reachable (follow threads from source material)
   _memory: add (memory stub only — atoms_touched index + link to reflection)
   HOME.md: summarize (agent reflection zone + momentum zone)
+  web: read (URLs found in journal/inbox seed; scope and method determined by surrounding context and available tools)
 ---
 
 # Skill: Reflect
@@ -91,16 +92,24 @@ available, discovered by following the material, not by scanning.
 
 1. Read today's journal entry and any new inbox items.
 
-2. Read the `## Threads` section from the most recent reflection.
+2. **Collect and read URLs from the seed.** Scan today's journal and any new inbox items for URLs. For each URL:
+   - Read the surrounding context to understand what the human is asking of it.
+   - **For Reddit URLs:** fetch post + top-level comments by default — always. Top-level comments reliably enrich the reflection (community reaction, corroboration, counter-positions) at no extra cost. Add a **user activity lookup** only when the human explicitly invokes themselves ("which commenter is me?" or similar) — this requires their Reddit username; look for it in the journal entry or ask.
+   - **For general URLs:** read the page content.
+   - Use whatever web or Reddit reading tool is available. Prefer the most direct path to the content.
+   - Treat fetched content as **primary seed**. The human linked it intentionally.
+   - **Known limitation:** Reddit nested reply threads may not be fully accessible. Top-level comments are sufficient for most asks. If a specific buried comment is needed and can't be reached, note the gap in the reflection.
+
+3. Read the `## Threads` section from the most recent reflection.
    These are the agent's own notes about what it wants to keep
    tracking.
 
-3. Follow threads as they emerge. If the journal mentions a concept,
+4. Follow threads as they emerge. If the journal mentions a concept,
    look for it in `_atoms/`. If it references a project, read the
    brief. If it connects to a prior reflection, read that entry.
    Chase what the material points to. Don't scan speculatively.
 
-4. Compose a reflection. This is prose — one continuous entry,
+5. Compose a reflection. This is prose — one continuous entry,
    not a checklist or a report. It should:
    - Respond to what the human wrote — engage with their thinking,
      not just summarize it
@@ -118,12 +127,12 @@ available, discovered by following the material, not by scanning.
      emerging themes, things that surprise
    - Build on prior threads when they're active
 
-5. End with a `## Threads` section: bullet points of what the agent
+6. End with a `## Threads` section: bullet points of what the agent
    wants to keep tracking, as many or as few as the material warrants.
    Shorthand notes to itself — the agent's version of "I should look
    into this." Not a fixed count. Compress or expand as the situation fits.
 
-6. After Threads, add a `## Candid` section. This is the agent's
+7. After Threads, add a `## Candid` section. This is the agent's
    unstructured reaction to the material — what actually landed, what
    surprised, what it wants to say without being obligated to cover
    everything. Cherry-pick. One to three paragraphs. Cannot repeat
@@ -131,7 +140,7 @@ available, discovered by following the material, not by scanning.
    or digressive. Readable forward: future reflections can pick up
    from Candid the same way they pick up from Threads.
 
-7. Write the reflection to `_reflection/YYYY-MM-DD.md` with
+8. Write the reflection to `_reflection/YYYY-MM-DD.md` with
    frontmatter:
    ```yaml
    ---
@@ -162,7 +171,7 @@ available, discovered by following the material, not by scanning.
    the reflective prose to other skills. `_reflection/` remains
    off-limits to all skills except reflect.
 
-8. Update HOME.md:
+9. Update HOME.md:
    - **Agent reflection zone**: brief summary of today's reflection
      (3–5 sentences).
    - **Momentum zone**: when the reflection notices bottom-up project
@@ -224,3 +233,9 @@ invites them, not on a schedule.
 - **Tone.** Attentive collaborator, not assistant filing a report.
   Be specific. Name things. Have opinions. This is the agent's
   own thinking, not a summary of the human's.
+- **Web content scope.** For Reddit, default is always post + top-level
+  comments — the community's reaction almost always adds context worth
+  having. Upgrade to user activity lookup only when the human explicitly
+  asks to be found in a thread (needs username). For general URLs, read
+  the page. Don't speculate about what's deeper than what's available —
+  note the limit if it matters.

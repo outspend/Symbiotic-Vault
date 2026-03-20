@@ -87,6 +87,24 @@ living documents — some aspirational, some ready to test.
 4. Plugin settings, CSS snippets, and folder templates are
    pre-configured.
 
+## Optional: MCP Integrations
+
+The vault's skills work without external integrations. These are
+optional enhancements that extend what the agent can do during
+skill runs.
+
+**Reddit access** (for reflect to follow Reddit links in journals):
+```
+claude mcp add --transport stdio reddit-mcp-buddy -s user -- npx -y reddit-mcp-buddy
+```
+Provides two capabilities:
+- `get_post_details` — fetches a Reddit post and its top-level comments.
+  Used when a journal entry links to a Reddit post and asks about its
+  content or the shape of the discussion.
+- `user_analysis` — looks up a user's recent comment history. Used when
+  the journal asks "which commenter is me?" and the human's Reddit
+  username is available.
+
 ## For Collaborators
 
 If you're reading this vault with an AI assistant, start with:
