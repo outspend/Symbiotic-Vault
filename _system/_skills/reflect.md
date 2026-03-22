@@ -96,9 +96,9 @@ available, discovered by following the material, not by scanning.
    - Read the surrounding context to understand what the human is asking of it.
    - **For Reddit URLs:** fetch post + top-level comments by default — always. Top-level comments reliably enrich the reflection (community reaction, corroboration, counter-positions) at no extra cost. Add a **user activity lookup** only when the human explicitly invokes themselves ("which commenter is me?" or similar) — this requires their Reddit username; look for it in the journal entry or ask.
    - **For general URLs:** read the page content.
-   - Use whatever web or Reddit reading tool is available. Prefer the most direct path to the content.
+   - Before fetching any URL, check the available deferred tools for a platform-specific MCP that matches the source (e.g. a Reddit MCP for Reddit URLs, a Twitter MCP for Twitter URLs). Prefer it over WebFetch when a match exists. Fall back to WebFetch if none is found.
    - Treat fetched content as **primary seed**. The human linked it intentionally.
-   - **Known limitation:** Reddit nested reply threads may not be fully accessible. Top-level comments are sufficient for most asks. If a specific buried comment is needed and can't be reached, note the gap in the reflection.
+   - **Known limitation:** Platform-specific MCP tools may not expose full nested reply threads. Top-level content is sufficient for most asks. If a specific buried item is needed and can't be reached, note the gap in the reflection.
 
 3. Read the `## Threads` section from the most recent reflection.
    These are the agent's own notes about what it wants to keep
@@ -148,6 +148,65 @@ available, discovered by following the material, not by scanning.
    date: YYYY-MM-DD
    ---
    ```
+   After `## Candid`, append this dataviewjs block as the final element:
+
+   ````
+   ```dataviewjs
+   const today = moment().format("YYYY-MM-DD");
+   const sourceFile = dv.current().file;
+   const sourceTitle = sourceFile.name;
+
+   const replyPath = `_inbox/reply-${sourceTitle}.md`;
+   const replyExists = app.vault.getAbstractFileByPath(replyPath);
+   const linkText = replyExists ? '→ View reply' : '↩ Reply to threads →';
+
+   const a = dv.container.createEl('a', { text: linkText, cls: 'internal-link' });
+   a.addEventListener('click', async (e) => {
+     e.preventDefault();
+
+     if (!replyExists) {
+       const content = await app.vault.read(app.vault.getAbstractFileByPath(sourceFile.path));
+
+       const threadsMatch = content.match(/## Threads\n+([\s\S]*?)(?=\n## |\s*$)/);
+       if (!threadsMatch) { new Notice("No ## Threads section found."); return; }
+
+       const threads = threadsMatch[1].trim()
+         .split('\n')
+         .filter(l => l.trim().startsWith('- '))
+         .map(l => l.trim().slice(2).trim());
+
+       if (!threads.length) { new Notice("No thread bullets found."); return; }
+
+       const body = threads.map(t => `> ${t}\n\n[your reply here]`).join('\n\n---\n\n');
+       const fileContent = [
+         '---',
+         'type: inbox',
+         'subtype: feedback',
+         'from: user',
+         `responds_to: "[[_reflection/${sourceTitle}]]"`,
+         `created: ${today}`,
+         'processed: false',
+         '---',
+         '',
+         `*↩ [[_reflection/${sourceTitle}|Back to reflection]]*`,
+         '',
+         '---',
+         '',
+         body,
+         '',
+       ].join('\n');
+
+       await app.vault.create(replyPath, fileContent);
+     }
+
+     app.workspace.openLinkText(`reply-${sourceTitle}`, '', false);
+   });
+   ```
+   ````
+
+   This renders as a clickable "↩ Reply to threads →" link in Reading View.
+   The generated reply file includes a back-link to the source reflection.
+   No other footer content.
    Then write a memory stub to `_memory/` with frontmatter only:
    ```yaml
    ---

@@ -11,18 +11,18 @@ type: home
 
 ```dataviewjs
 const date = moment().format("YYYY-MM-DD");
-const n = dv.pages('"_inbox"').where(p => p.file.name.startsWith(date)).length;
+const n = dv.pages('"_inbox"').where(p => p.file.name.startsWith(date + "_")).length;
 const name = `${date}_${String(n + 1).padStart(3, "0")}`;
 const path = `_inbox/${name}.md`;
 
-const a = dv.container.createEl('a', { text: '📥 New Capture →', cls: 'internal-link' });
+const a = dv.container.createEl('a', { text: '📥 Capture →', cls: 'internal-link' });
 a.addEventListener('click', async (e) => {
   e.preventDefault();
   if (!app.vault.getAbstractFileByPath(path)) {
     const content = `---\ntype: inbox\nsubtype: \nfrom: \nresponds_to: \ncreated: ${date}\nprocessed: false\n---\n\n`;
     await app.vault.create(path, content);
   }
-  app.workspace.openLinkText(name, '', true);
+  app.workspace.openLinkText(name, '', false);
 });
 ```
 
@@ -31,14 +31,6 @@ a.addEventListener('click', async (e) => {
 - [[_system/AGENT_PROTOCOL|Agent Protocol]]
 
 ---
-
-## ✦ Inbox (Unprocessed)
-```dataview
-LIST title
-FROM "_inbox"
-WHERE processed = false
-SORT file.name ASC
-```
 
 ## ✦ Active Projects
 ```dataview
@@ -63,6 +55,14 @@ SORT file.mtime DESC
 >> LIST FROM "_reflection"
 >> SORT file.name DESC
 >> LIMIT 5
+>> ```
+>
+>> [!note] Inbox (Unprocessed)
+>> ```dataview
+>> LIST FROM "_inbox"
+>> WHERE processed = false
+>> SORT file.name DESC
+>> LIMIT 10
 >> ```
 
 ## ✦ Recent Atoms

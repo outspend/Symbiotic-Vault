@@ -1,0 +1,36 @@
+/* Multi-column callout layout for HOME.md
+   Usage: > [!multi-column] with nested >> [!note] callouts */
+
+/* Hide the outer callout chrome */
+.callout[data-callout="multi-column"] {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.callout[data-callout="multi-column"] > .callout-title {
+  display: none;
+}
+
+/* Flex the inner callouts side by side */
+.callout[data-callout="multi-column"] > .callout-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+/* Each nested callout takes equal width */
+.callout[data-callout="multi-column"] > .callout-content > .callout {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Stack on narrow views */
+@media (max-width: 600px) {
+  .callout[data-callout="multi-column"] > .callout-content {
+    flex-direction: column;
+  }
+}

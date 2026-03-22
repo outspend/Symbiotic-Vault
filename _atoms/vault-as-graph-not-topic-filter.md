@@ -6,7 +6,7 @@ kind: concept
 status: seed
 created: 2026-03-16
 source:
-  - _inbox/2026-03-10_004.md
+  - _journal/2026-03-09.md
 tags: [vault-design, knowledge-graph, obsidian, mcp, structure]
 frames: [formal-knowledge-design]
 ---

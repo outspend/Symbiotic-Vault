@@ -67,6 +67,19 @@ provenance.
    If frontmatter is present, use it. If prose only, infer subtype,
    source, and response relationships from content.
 
+   Also read the `from:` field to determine whose voice shaped the item:
+   - **External name** (e.g., `peter-brinson`): feedback from a
+     collaborator. Enriches existing atoms with the response relationship.
+   - **`agent`**: a Claude-mediated capture from a collaboration session.
+     Treat as a collaborative artifact — ideas may overlap with atoms
+     sourced from the human's journal. Check for reinforcement before
+     creating duplicates.
+   - **`user`**: the human responding to agent output (reflection replies,
+     thread endorsements). Read for signals: endorsements reinforce atoms,
+     project flags surface in momentum, substantive replies get atomized
+     normally.
+   - **Blank or absent**: infer from content as usual.
+
 5. For each source file, identify distinct concepts that deserve their
    own atom. A concept deserves an atom if it:
    - Has identity (you could name it)

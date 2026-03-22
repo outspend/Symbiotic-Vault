@@ -94,6 +94,10 @@ the human to link.**
 ### Full Surface Map
 
 ```
+Shared input layer:
+  _journal/    — the human's unmediated voice (one voice, one day)
+  _inbox/      — correspondence (external, agent, and user replies)
+
 Human writes here:          Agent never modifies these
   _journal/                  (daily journals)
   _projects/*/notes/        (brainstorming per division)
@@ -160,10 +164,21 @@ vault/
 
 ### Folder Contracts
 
-**`_inbox/`** — Loose capture. No required format. Items here await
-atomization. After processing, the original remains (never deleted)
-with a `processed: true` flag added to frontmatter if it has any,
-or as-is if it's just raw text.
+**`_inbox/`** — The vault's mailbox. Correspondence from any voice
+other than the human's unmediated journal writing: external captures
+(articles, links, clippings), collaborator feedback, agent-mediated
+notes from collaboration sessions, and the human's replies to agent
+output. The journal is for the human's own voice. The inbox is where
+voices mix.
+
+Items may include optional frontmatter:
+- `subtype:` feedback | reference | capture
+- `from:` person-name | agent | user
+- `responds_to:` path to the file being responded to
+
+All fields are optional. Atomize infers what it can from content
+when frontmatter is absent. After processing, the original remains
+(never deleted) with `processed: true` added to frontmatter.
 
 **`_journal/`** — Daily journals. One file per day, named `YYYY-MM-DD.md`.
 Immutable after the day passes. Atomize reads these but never modifies
