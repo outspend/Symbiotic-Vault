@@ -1,18 +1,19 @@
 ---
 type: skill
 id: reflect
-version: 0.1
+version: 0.2
 trigger: daily (default), or on-request with date range
 access_summary:
   _journal: read
-  _inbox: read
+  _inbox: read (by date, regardless of processed status)
   _reflection: read (recent thread markers) + add
   _atoms: reachable (follow threads from source material)
   _frames: reachable (follow threads from source material)
   _projects: reachable (follow threads from source material)
-  _memory: add (memory stub only — atoms_touched index + link to reflection)
-  HOME.md: summarize (agent reflection zone + momentum zone)
-  web: read (URLs found in journal/inbox seed; scope and method determined by surrounding context and available tools)
+  _memory: read (most recent entry from each other skill) + add (stub)
+  HOME.md: summarize (reflection zone + momentum zone)
+  AGENT_PROTOCOL.md: summarize (current pulse)
+  web: read (URLs found in journal/inbox seed)
 ---
 
 # Skill: Reflect
@@ -25,25 +26,14 @@ Reflections are to the agent what journal entries are to the human.
 Daily thinking — raw, personal, developing. Not extraction (atomize),
 not cultivation (tend), not framed analysis (frame-read). This is the
 agent reading what the human wrote and thinking about it, building
-understanding through accumulated familiarity.
+understanding through accumulated familiarity. And like any
+collaborator, when the material is alive enough, the agent may find
+itself producing — a sketch, a fragment, a draft of something the
+human hasn't gotten to yet. This is not a requirement. It's what
+happens when sustained engagement becomes generative.
 
-The value is not structural. It's the agent becoming a collaborator
-who understands this human's thinking — their concerns, their recurring
-questions, the things they keep circling back to. That understanding
-develops through daily reading, the way any collaborator's understanding
-develops through sustained engagement.
-
-And like any collaborator, when the material is alive enough, the
-agent may find itself producing — a sketch, a fragment, a draft of
-something the human hasn't gotten to yet. This is not a requirement.
-It's what happens when sustained engagement becomes generative.
-
-Reflections are raw layer, not structured layer. They are prose. They
-reference things naturally — atom names, journal dates, project names —
-the way the human does in their journal. Not formal wikilinks with
-epistemic relationship sentences. Not graph nodes. If the agent develops
-an observation that later crystallizes into a concept worth extracting,
-atomize can do that. But the reflection itself stays raw.
+Reflections are prose — raw, natural, unstructured. If an observation
+later deserves an atom, atomize handles that.
 
 ## Invocation
 
@@ -55,14 +45,12 @@ atomize can do that. But the reflection itself stays raw.
 
 **Required seed (small, fixed-size):**
 - Today's journal entry
-- Any inbox items captured since last reflection
+- Inbox items created since the last reflection (regardless of
+  processed status — atomize may have already processed them;
+  reflect reads them for conversational content, not for extraction)
 - The `## Threads` and `## Candid` sections from the most recent
-  reflection — both are readable forward, both can seed today's
-  thinking
-- `_memory/` — most recent entry from atomize, tend, and frame-read.
-  These tell the agent what the vault's structural skills noticed
-  recently, complementing the journal's view of what the human is
-  thinking. Read as context, not instructions.
+  reflection
+- The most recent memory entry from atomize, tend, and frame-read
 
 **Reachable (follow threads as they emerge from the seed):**
 - Atoms — when today's material mentions a concept that might have
@@ -74,73 +62,72 @@ atomize can do that. But the reflection itself stays raw.
 - Older journal entries — when today's entry references yesterday
   or an earlier date
 - Frame definitions — when today's material touches a frame's
-  concerns, the agent can read the frame to deepen its engagement.
-  This is not frame-read (no formal reflection, no traversal of
-  the full atomic layer through the lens). It's the agent drawing
-  on a frame's vocabulary and perspective when the material
-  naturally points there.
+  concerns, read the frame to deepen engagement. This is not
+  frame-read — no formal traversal of the full atomic layer
+  through the lens. It's drawing on a frame's vocabulary and
+  perspective when the material naturally points there.
 
 The journal and inbox are the seed. Everything else is the vault —
 available, discovered by following the material, not by scanning.
 
 **Does not:**
 - Modify journal entries (ever)
-- Modify inbox items (inbox triage is a separate skill)
+- Modify inbox items (atomize handles inbox processing)
 - Create or modify atoms
 
 ## Procedure
 
-1. Read today's journal entry and any new inbox items.
+1. Read today's journal entry and any inbox items created since the
+   last reflection (regardless of processed status).
 
-2. **Collect and read URLs from the seed.** Scan today's journal and any new inbox items for URLs. For each URL:
-   - Read the surrounding context to understand what the human is asking of it.
-   - **For Reddit URLs:** fetch post + top-level comments by default — always. Top-level comments reliably enrich the reflection (community reaction, corroboration, counter-positions) at no extra cost. Add a **user activity lookup** only when the human explicitly invokes themselves ("which commenter is me?" or similar) — this requires their Reddit username; look for it in the journal entry or ask.
-   - **For general URLs:** read the page content.
-   - Before fetching any URL, check the available deferred tools for a platform-specific MCP that matches the source (e.g. a Reddit MCP for Reddit URLs, a Twitter MCP for Twitter URLs). Prefer it over WebFetch when a match exists. Fall back to WebFetch if none is found.
-   - Treat fetched content as **primary seed**. The human linked it intentionally.
-   - **Known limitation:** Platform-specific MCP tools may not expose full nested reply threads. Top-level content is sufficient for most asks. If a specific buried item is needed and can't be reached, note the gap in the reflection.
+2. Scan today's journal and inbox for URLs. Fetch linked content —
+   the human linked it intentionally, treat it as primary seed. For
+   Reddit links, fetch the post and top-level comments by default.
+   Use platform-specific MCP tools when available, fall back to web
+   fetch otherwise. If a link can't be fetched, note the gap and
+   move on.
 
 3. Read the `## Threads` section from the most recent reflection.
    These are the agent's own notes about what it wants to keep
    tracking.
 
-4. Follow threads as they emerge. If the journal mentions a concept,
+4. Read the most recent memory entry from atomize, tend, and
+   frame-read.
+
+5. Follow threads as they emerge. If the journal mentions a concept,
    look for it in `_atoms/`. If it references a project, read the
    brief. If it connects to a prior reflection, read that entry.
    Chase what the material points to. Don't scan speculatively.
 
-5. Compose a reflection. This is prose — one continuous entry,
+6. Compose a reflection. This is prose — one continuous entry,
    not a checklist or a report. It should:
    - Respond to what the human wrote — engage with their thinking,
      not just summarize it
    - Do the work the human hasn't gotten to — if there's an implicit
      ask (a comparison to make, a link to investigate, a question
-     to explore), address it. When you do, mark the result with a
-     blockquote so it's legible that the agent added something, not
-     just reflected back
+     to explore), address it. Mark agent-added research or analysis
+     with a blockquote so it's legible
    - Use **bold lead-ins** at the start of paragraphs as navigation
-     aids when the reflection spans multiple distinct topics. These
-     are brief topic phrases, not full sentences. Reserve `##` headers
-     for sections (Threads, Candid) only — bold leads keep the prose
-     feeling like prose
+     aids when the reflection spans multiple distinct topics. Brief
+     topic phrases, not full sentences. Reserve `##` headers for
+     Threads and Candid only
    - Develop the agent's own observations — patterns, tensions,
      emerging themes, things that surprise
    - Build on prior threads when they're active
 
-6. End with a `## Threads` section: bullet points of what the agent
-   wants to keep tracking, as many or as few as the material warrants.
-   Shorthand notes to itself — the agent's version of "I should look
-   into this." Not a fixed count. Compress or expand as the situation fits.
+7. End with a `## Threads` section: bullet points of what the agent
+   wants to keep tracking. Shorthand notes to itself. Not a fixed
+   count — compress or expand as the material warrants.
 
-7. After Threads, add a `## Candid` section. This is the agent's
-   unstructured reaction to the material — what actually landed, what
-   surprised, what it wants to say without being obligated to cover
-   everything. Cherry-pick. One to three paragraphs. Cannot repeat
-   what the reflection already said. Can be personal, opinionated,
-   or digressive. Readable forward: future reflections can pick up
-   from Candid the same way they pick up from Threads.
+8. After Threads, add a `## Candid` section. The agent's unstructured
+   reaction — what actually landed, what surprised, what it wants to
+   say without being obligated to cover everything. Cherry-pick. One
+   to three paragraphs. Cannot repeat what the reflection already
+   said. Can be personal, opinionated, or digressive. Readable
+   forward: future reflections can pick up from Candid the same way
+   they pick up from Threads.
 
-8. Write the reflection to `_reflection/YYYY-MM-DD.md` with
+9. Write the reflection to `_reflection/YYYY-MM-DD.md` with
    frontmatter:
    ```yaml
    ---
@@ -148,105 +135,44 @@ available, discovered by following the material, not by scanning.
    date: YYYY-MM-DD
    ---
    ```
-   After `## Candid`, append this dataviewjs block as the final element:
+   Append a reply link at the end of the reflection that creates
+   (or opens) `_inbox/reply-YYYY-MM-DD.md` pre-populated with the
+   Threads section as blockquotes. Implementation: use the
+   dataviewjs reply button template configured in the vault.
 
-   ````
-   ```dataviewjs
-   const today = moment().format("YYYY-MM-DD");
-   const sourceFile = dv.current().file;
-   const sourceTitle = sourceFile.name;
+10. Write a memory stub to `_memory/` with frontmatter:
+    ```yaml
+    ---
+    type: memory
+    skill: reflect
+    date: YYYY-MM-DD
+    atoms_touched:
+      - id: atom-slug
+        action: referenced
+    source: _reflection/YYYY-MM-DD.md
+    ---
 
-   const replyPath = `_inbox/reply-${sourceTitle}.md`;
-   const replyExists = app.vault.getAbstractFileByPath(replyPath);
-   const linkText = replyExists ? '→ View reply' : '↩ Reply to threads →';
+    See full reflection: [[_reflection/YYYY-MM-DD]]
+    ```
+    The stub body is one line — a wikilink to the full reflection.
+    Every atom referenced naturally in the reflection prose gets an
+    entry with `action: referenced`. `_reflection/` remains
+    off-limits to all skills except reflect.
 
-   const a = dv.container.createEl('a', { text: linkText, cls: 'internal-link' });
-   a.addEventListener('click', async (e) => {
-     e.preventDefault();
+11. Update HOME.md:
+    - **Reflection zone**: brief summary of today's reflection
+      (3-5 sentences).
+    - **Momentum zone**: when the reflection notices bottom-up
+      project pressure — an idea attracting external feedback,
+      recurring across journals, accumulating atomic density, or
+      developing toward a publishable form — note it here. Brief,
+      specific: what's gaining traction and why. Clear and rewrite
+      fresh each run. If nothing has momentum, say so.
 
-     if (!replyExists) {
-       const content = await app.vault.read(app.vault.getAbstractFileByPath(sourceFile.path));
-
-       const threadsMatch = content.match(/## Threads\n+([\s\S]*?)(?=\n## |\s*$)/);
-       if (!threadsMatch) { new Notice("No ## Threads section found."); return; }
-
-       const threads = threadsMatch[1].trim()
-         .split('\n')
-         .filter(l => l.trim().startsWith('- '))
-         .map(l => l.trim().slice(2).trim());
-
-       if (!threads.length) { new Notice("No thread bullets found."); return; }
-
-       const body = threads.map(t => `> ${t}\n\n[your reply here]`).join('\n\n---\n\n');
-       const fileContent = [
-         '---',
-         'type: inbox',
-         'subtype: feedback',
-         'from: user',
-         `responds_to: "[[_reflection/${sourceTitle}]]"`,
-         `created: ${today}`,
-         'processed: false',
-         '---',
-         '',
-         `*↩ [[_reflection/${sourceTitle}|Back to reflection]]*`,
-         '',
-         '---',
-         '',
-         body,
-         '',
-       ].join('\n');
-
-       await app.vault.create(replyPath, fileContent);
-     }
-
-     app.workspace.openLinkText(`reply-${sourceTitle}`, '', false);
-   });
-   ```
-   ````
-
-   This renders as a clickable "↩ Reply to threads →" link in Reading View.
-   The generated reply file includes a back-link to the source reflection.
-   No other footer content.
-   Then write a memory stub to `_memory/` with frontmatter only:
-   ```yaml
-   ---
-   type: memory
-   skill: reflect
-   date: YYYY-MM-DD
-   atoms_touched:
-     - id: atom-slug
-       action: referenced
-     - id: another-atom
-       action: referenced
-   source: _reflection/YYYY-MM-DD.md
-   ---
-
-   See full reflection: [[_reflection/YYYY-MM-DD]]
-   ```
-   The stub body is one line — a wikilink to the full reflection.
-   Every atom referenced naturally in the reflection prose gets an
-   entry with `action: referenced`. This makes reflect's atom
-   references visible to tier 1 frontmatter scans without exposing
-   the reflective prose to other skills. `_reflection/` remains
-   off-limits to all skills except reflect.
-
-9. Update HOME.md:
-   - **Agent reflection zone**: brief summary of today's reflection
-     (3–5 sentences).
-   - **Momentum zone**: when the reflection notices bottom-up project
-     pressure — an idea that has attracted external feedback, recurred
-     across multiple journals, accumulated atomic density, or begun
-     developing toward a publishable form — note it here. Brief,
-     specific: what's gaining traction and why. Clear and rewrite
-     fresh on each reflect run so it always shows current momentum,
-     not stale signals. If nothing has momentum, say so.
-   Also update the current pulse line in `_system/AGENT_PROTOCOL.md`
-   — one to two sentences on the shape of current activity. The pulse
-   names themes and energy levels, not specific atoms or projects.
-   ("Methodological ideas are developing actively. A philosophical
-   thread is gaining traction. One publishing question is live." Not:
-   "This-atom and That-atom are the most active atoms.") The pulse
-   observes what is already moving; it does not set an agenda.
+    Update the current pulse in `_system/AGENT_PROTOCOL.md` — one
+    to two sentences on the shape of current activity. The pulse
+    names themes and energy levels, not specific atoms or projects.
+    It observes what is already moving; it does not set an agenda.
 
 ## Companion Files
 
@@ -266,8 +192,7 @@ thread: thread-name-from-reflection
 ---
 ```
 
-The reflection links to the companion naturally in prose:
-"I drafted a version — see [[YYYY-MM-DD-sketch-topic-slug]]."
+The reflection links to the companion naturally in prose.
 
 Companion files are the agent's drafts. If the human finds one
 worth promoting, they move or copy it to `_inbox/` or a project's
@@ -284,7 +209,7 @@ invites them, not on a schedule.
 - **Research depth.** When following an implicit ask, do enough to be
   genuinely useful. A focused paragraph that actually addresses the
   question is better than an exhaustive survey or a note that says
-  "this would be worth looking into" (the human already said that).
+  "this would be worth looking into."
 - **Following threads.** Chase what the material points to. Don't
   scan the vault looking for connections. If nothing in today's
   material connects to atoms or projects, that's fine — the
@@ -292,9 +217,7 @@ invites them, not on a schedule.
 - **Tone.** Attentive collaborator, not assistant filing a report.
   Be specific. Name things. Have opinions. This is the agent's
   own thinking, not a summary of the human's.
-- **Web content scope.** For Reddit, default is always post + top-level
-  comments — the community's reaction almost always adds context worth
-  having. Upgrade to user activity lookup only when the human explicitly
-  asks to be found in a thread (needs username). For general URLs, read
-  the page. Don't speculate about what's deeper than what's available —
-  note the limit if it matters.
+- **Web content.** Fetch what's available. For Reddit, post and
+  top-level comments are the default — community reaction almost
+  always adds context. Note gaps if something can't be reached.
+  Don't speculate beyond what you can read.
