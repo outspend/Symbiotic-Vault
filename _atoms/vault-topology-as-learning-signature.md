@@ -23,3 +23,4 @@ This is an innovation opportunity: rather than asking a learner to self-report t
 - [[eccentric-learning-paths]] — surfaces: traversal topology is how eccentric paths become visible as patterns
 - [[vault-as-graph-not-topic-filter]] — enabled by: graph structure is what makes topology legible; topic-filtered structures flatten the relational information that would generate a signature
 - [[baudrillard-simulacrum]] — resonates with: the vault as simulacrum (not copy) idea in the 2026-03-10 journal is related — vault topology represents the self without being the self
+- [[instructor-vault-as-cartridge]]: grounds — student topology as learning signature is what's revealed by how they traverse the instructor's cartridge; the signature is the evidence of genuine engagement

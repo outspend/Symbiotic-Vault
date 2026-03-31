@@ -26,4 +26,4 @@ The vault connection: the question is whether a vault that accumulates framings 
 ## Relations
 - [[vault-as-simulacrum-not-copy]] — grounds: the four phases are the framework that enables a precise claim about what the vault is and isn't doing representationally
 - [[framing-as-contract]] — resonates with: framing-as-contract describes how representation establishes its own rules; Baudrillard extends this to the point where the contract severs the referent entirely
-- [[vault-topology-as-learning-signature]] — connects: topology as signature relates to Baudrillard's interest in how representation can stand for the real without copying it
+- [[vault-topology-as-learning-signature]]: grounds — the vault aims for Baudrillard's phase 1 (faithful reflection); topology as signature is the structural form that claim takes — representing the learner without claiming to copy them

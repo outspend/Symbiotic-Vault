@@ -3,7 +3,7 @@ type: atom
 id: llm-common-topologies
 aliases: [LLM common topologies, LLM default patterns, model default moves]
 kind: concept
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_007.md
@@ -25,3 +25,4 @@ Early evidence suggests convergence across model families on at least two topolo
 - [[constraint-play-on-topologies]] — grounds: the topology concept makes constraint play meaningful — forbidding a topology tests its grip and possibly generates something genuinely new
 - [[bardo-as-llm-retraining-metaphor]] — exemplifies: bardo is itself a common topology (Buddhism as LLM religion), and also a case where the topology has unusual explanatory depth
 - [[framing-as-contract]] — extends: topologies are pre-loaded contractual framings; framing-as-contract explains why they exert pull
+- [[word2vec-as-humanistic-concept]]: grounds — Word2Vec embedding geometry explains why certain topologies cluster in LLM responses; common topologies are features of the training distribution's geometry

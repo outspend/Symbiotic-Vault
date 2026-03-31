@@ -21,4 +21,5 @@ This is interesting for agentic design: if agents can detect and resist manipula
 
 ## Relations
 - [[agentic-cowriting-as-performative-form]] — contrast with: adversarial agent interaction is another form of agents as actors — attack/defense rather than co-creation; both make AI moves visible
-- [[ai-moves-visibility]] — resonates with: the attack-defense dynamic makes both agents' moves maximally visible — a different context from cowriting but the same structural interest
+- [[ai-moves-visibility]]: extends — the attack-defense dynamic makes both agents' moves maximally visible; adversarial contexts are an extreme case of AI moves visibility
+- [[warhol-factory-as-agentic-model]]: complements — the Factory delegated creative authority horizontally; claude-hacking-claude is the adversarial case of agent-to-agent interaction, the shadow side of the Factory model

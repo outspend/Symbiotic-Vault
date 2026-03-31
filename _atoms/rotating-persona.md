@@ -21,3 +21,4 @@ The chimera reference is deliberate — a figure composed of incompatible parts,
 - [[agentic-cowriting-as-performative-form]] — supports: rotating persona is a way to make the AI partner's voice range visible and interesting — a performative technique
 - [[constraint-play-on-topologies]] — complements: both intervene in the model's defaults — constraint play removes a default move; rotating persona opens a multitude of positions
 - [[writing-teaching-synthesis]] — candidate for: rotating persona is a learnable prompting skill with teaching potential
+- [[agents-as-mental-models]]: instantiates — rotating persona is one technique for simulating multiple mental models; agents-as-mental-models is the conceptual frame it operates within

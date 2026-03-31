@@ -19,4 +19,4 @@ Distinct value over manual documentation: LLM assistance lowers the barrier to f
 
 ## Relations
 - [[llm-to-knowledge-graph-pipeline]] — enables: the KG pipeline is the likely technical mechanism for converting game design prose into an inspectable graph
-- [[vault-as-graph-not-topic-filter]] — resonates with: both involve treating a complex system as a graph for navigability and inspection
+- [[vault-as-graph-not-topic-filter]]: extends — game-system-articulation is a domain-specific application of the graph-not-filter principle; both treat a complex system as a graph for navigability and inspection

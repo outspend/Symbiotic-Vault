@@ -24,3 +24,4 @@ Connected to the LilPAIPer critique: a tutoring system that never learns the stu
 - [[vault-as-self-profiling-system]] — grounds: eccentric paths require a system that accumulates the student's shape without normalizing it — the self-profiling vault is the infrastructure for eccentric learning
 - [[vault-topology-as-learning-signature]] — manifests in: the topology of how a student traverses material is what eccentric paths look like from outside — a signature rather than a route
 - [[writing-teaching-synthesis]] — part of: eccentric paths are the pedagogical equivalent of the vault as personal argument — both resist standardization
+- [[instructor-vault-as-cartridge]]: complements — the cartridge provides the scaffold; eccentric learning paths are what students carve through the structured material on their own terms

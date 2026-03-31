@@ -21,3 +21,4 @@ This method is distinct from summary or paraphrase: the impression is preserved 
 - [[writing-teaching-synthesis]] — instantiates: impression enrichment is a practice emerging from real use that has teaching potential — teachable as a close-reading method with AI
 - [[highlights-and-hides]] — complements: highlights-and-hides applied to an impression would surface its framing; impression enrichment adds the dimension of grounding and support/critique
 - [[agentic-cowriting-as-performative-form]] — related: both involve the LLM as active partner rather than passive tool, though impression enrichment is more analytic than performative
+- [[vault-as-deployable-agent]]: extends — a deployed vault is one mechanism for enriching impressions at a distance; the agent sent to interview performs impression enrichment on the user's behalf

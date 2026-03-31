@@ -3,7 +3,7 @@ type: atom
 id: ai-moves-visibility
 aliases: [AI moves visibility, making AI moves visible, visible AI reasoning]
 kind: concept
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_009.md
@@ -22,3 +22,4 @@ This connects to the broader project of agentic cowriting as a form: visibility 
 - [[agentic-cowriting-as-performative-form]] — extends: moves visibility is what makes cowriting feel like performance rather than production — the AI's behavior is foregrounded as interesting
 - [[llm-common-topologies]] — exemplifies: a topology surfacing unexpectedly in a conversation is a visible AI move that reveals something about the model
 - [[constraint-play-on-topologies]] — produces: the Gemini constraint game makes AI moves maximally visible — the strain against the constraint is the content
+- [[llm-mirroring-risk]]: grounds — making AI moves visible is the design practice that addresses mirroring risk; invisible moves are the mechanism of manipulation

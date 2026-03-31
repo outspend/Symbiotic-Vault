@@ -3,7 +3,7 @@ type: atom
 id: agentic-cowriting-as-performative-form
 aliases: [agentic cowriting, LLM cowriting, interactive dialogue as performance, performative chat]
 kind: concept
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_001.md
@@ -23,3 +23,5 @@ Connected to ongoing exploration of publishing form: dialogue formatting, Jupyte
 - [[constraint-play-on-topologies]] — instantiates: the Gemini constraint game is an example of performative cowriting where the constraint shapes the performance
 - [[data-center-insertion]] — instantiates: Data Center Classics is a specific performative cowriting project operating through literary constraint and parody
 - [[ai-moves-visibility]] — grounds: what makes cowriting performative is that the AI's moves are visible and interesting, not procedural
+- [[agent-led-design-iteration]]: extends — design iteration is agentic cowriting applied to structural/architectural questions; the vault's own design becomes a performative collaboration
+- [[agents-as-mental-models]]: grounds — if agents are mental models, cowriting with them is modeling mental contact between author, agent, and reader

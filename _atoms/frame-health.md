@@ -19,3 +19,6 @@ The goal is frame sophistication: recognizing when a working frame has started t
 - [[highlights-and-hides]] — sibling method: highlights-and-hides diagnoses a given framing at a moment; frame-health monitors framing across a session — both serve epistemic clarity
 - [[framing-as-contract]] — grounds: frame health presupposes that frames are contracts that can become inconsistent, require renegotiation, or be abandoned
 - [[writing-teaching-synthesis]] — candidate for: frame-health is a practice that bridges writing discovery and teaching curriculum — a learnable and teachable session skill
+- [[serendipity-by-design]]: complements — serendipity-by-design operates at session-design level (how to set up); frame-health monitors at session-content level (how it's holding); both serve epistemic vitality
+- [[uncertainty-as-generative-resource]]: complements — frame health monitors for topological lock-in; uncertainty-as-generative-resource is the positive claim about why maintaining openness matters
+- [[five-vault-experiments]]: instantiates — "The Séance" (from the five vault experiments) is a proposed mechanism for operationalizing frame health as a designed experiment

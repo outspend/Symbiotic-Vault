@@ -22,3 +22,5 @@ Two payoffs: critical (reveals how deeply the topology is loaded, and whether th
 - [[llm-common-topologies]] — derives from: constraint play is a practical method that makes topologies legible and observable; requires the topology concept to be motivating
 - [[agentic-cowriting-as-performative-form]] — instantiates: the Gemini constraint game is an example of agentic cowriting as performance — the constraint shapes what kind of collaborative text emerges
 - [[highlights-and-hides]] — complements: highlights-and-hides exposes what a framing does analytically; constraint play intervenes in it creatively
+- [[serendipity-by-design]]: instantiates — constraint play is one implementation of serendipity-by-design; forbidding a topology enacts the design-for-surprise principle
+- [[super-song-as-compositional-model]]: extends — the super-song experiment applies constraint play to compositional structure; three tonal inputs as inputs is constraint play at the composition level

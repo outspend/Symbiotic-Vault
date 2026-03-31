@@ -3,7 +3,7 @@ type: atom
 id: highlights-and-hides
 aliases: [highlights and hides, framing exposure prompt]
 kind: method
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_006.md
@@ -23,3 +23,5 @@ Distinct from hallucination detection (this addresses structural bias, not factu
 - [[frame-health]] — extends: both are prompting practices aimed at maintaining epistemic clarity during a session; highlights-and-hides diagnoses a given framing, frame-health monitors framing across a session
 - [[llm-common-topologies]] — applies to: topologies are exactly the kind of unreflective framing this method is designed to surface
 - [[writing-teaching-synthesis]] — instantiates: a prime candidate for the synthesis — a practice from writing that becomes a teachable unit in a curriculum
+- [[llm-mirroring-risk]]: grounds — applying highlights-and-hides to an LLM's own response surfaces mirroring; making the framing contract explicit reveals when it mirrors the user
+- [[serendipity-by-design]]: complements — both introduce productive friction into LLM interactions; highlights-and-hides works analytically (what's being framed?), serendipity-by-design works generatively (how to keep surprise alive)

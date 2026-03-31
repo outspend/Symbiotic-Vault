@@ -8,7 +8,7 @@ created: 2026-03-16
 source:
   - _journal/2026-03-09.md
 tags: [vault-design, knowledge-graph, obsidian, mcp, structure]
-frames: [formal-knowledge-design]
+frames: [formal-knowledge-design, vault-ecology]
 ---
 
 A structuring principle for vaults and knowledge systems: organize as a graph (relational, edge-defined, traversable) rather than as a topic filter (categorical, hierarchical, folder-defined). What you gain: connections become first-class citizens; emergent paths and clusters become visible; agents and tools can navigate the structure as a network rather than a taxonomy.
@@ -22,3 +22,4 @@ The question of whether to modify the vault structure for agents remains open: i
 - [[vault-topology-as-learning-signature]] — enables: only a graph structure makes traversal topology legible as signature
 - [[question-permutation-via-graph-modifiers]] — related: the canvas-UI graph modifier idea is a practical application of treating questions as graph elements
 - [[llm-to-knowledge-graph-pipeline]] — adjacent: both involve structuring knowledge as graph rather than flat text — one for vault design, one for LLM-extracted knowledge
+- [[permissive-membrane]]: enables — graph structure enables the permissive membrane to form; relational topology is what makes agent-human entanglement and emergence possible

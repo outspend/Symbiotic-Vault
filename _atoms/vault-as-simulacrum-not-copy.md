@@ -8,7 +8,7 @@ created: 2026-03-16
 source:
   - _journal/2026-03-10.md
 tags: [vault-design, representation, identity, philosophy]
-frames: [formal-knowledge-design, agentic-art]
+frames: [formal-knowledge-design, agentic-art, vault-ecology]
 ---
 
 The vault doesn't copy the self — it copies framings of the self as represented in note-taking and mapping practice. This is a precise claim, not a metaphor: the vault accumulates a set of representations (atoms, frames, traversal patterns) that reflect particular stances, tastes, and attention patterns without claiming to replicate consciousness or identity wholesale.
@@ -23,3 +23,4 @@ Implication for agent personas designed from a vault: such a persona inherits th
 - [[baudrillard-simulacrum]] — applies: uses Baudrillard's four-phase model to locate what kind of representational claim the vault makes
 - [[vault-as-self-profiling-system]] — extends: self-profiling is the mechanism; vault-as-simulacrum-not-copy is the epistemological claim about what that profile is and isn't
 - [[vault-topology-as-learning-signature]] — related: topology-as-signature is what the vault's framings look like in structural form — both concern what the vault represents
+- [[vault-as-agent-home]]: complements — vault-as-agent-home describes the ecological relationship (habitat); vault-as-simulacrum addresses the representational claim (what the vault contains and isn't)

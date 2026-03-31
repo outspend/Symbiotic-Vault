@@ -3,7 +3,7 @@ type: atom
 id: framing-as-contract
 aliases: [framing as contract, representational contract]
 kind: concept
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_006.md
@@ -21,4 +21,4 @@ Important: the contract operates independently of accuracy or good faith. A perf
 ## Relations
 - [[highlights-and-hides]] — grounds: this concept is the foundation that makes the highlights-and-hides prompting method coherent and generatively applicable
 - [[llm-common-topologies]] — extends: topologies are contractual framings that LLMs default to; recognizing the contract makes their pull legible
-- [[baudrillard-simulacrum]] — resonates with: Baudrillard's phases of the image are an extreme version of this — framing as contract that eventually severs the referent entirely
+- [[baudrillard-simulacrum]]: instantiates in extremis — Baudrillard's four phases are framing-as-contract taken to its logical limit; at phase 4 the contract has severed all accountability to the referent it originally described

@@ -20,3 +20,4 @@ Still speculative as application; the GitHub repo linked in the article needs in
 ## Relations
 - [[vault-as-graph-not-topic-filter]] — adjacent: both concern structuring knowledge as graph; KG pipeline is an extraction method, vault-as-graph is a design principle — they could be combined
 - [[game-system-articulation-via-llm]] — grounds: the KG pipeline is the likely technical mechanism for externalizing a game system as navigable structure
+- [[kg-from-narrative]]: extends — applies the KG pipeline specifically to narrative texts, where temporal structure and character-state add complexity to the extraction problem

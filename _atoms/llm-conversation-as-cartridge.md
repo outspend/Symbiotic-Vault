@@ -21,3 +21,4 @@ The cartridge framing implies that the conversation has a particular compressed 
 ## Relations
 - [[published-llm-conversation]] — extends: cartridge is a concept of what a published conversation can *do* beyond being read — it generates downstream artifacts
 - [[agentic-cowriting-as-performative-form]] — supports: the cartridge concept works if cowriting has genuine performative density — something worth extracting and transducing
+- [[instructor-vault-as-cartridge]]: extends — applies the cartridge concept from single conversations to curriculum design; the instructor vault is a multi-session, pedagogically structured cartridge

@@ -3,7 +3,7 @@ type: atom
 id: published-llm-conversation
 aliases: [published LLM conversation, LLM conversation as artifact, publishable conversation]
 kind: question
-status: seed
+status: developing
 created: 2026-03-16
 source:
   - _inbox/2026-03-10_009.md
@@ -25,3 +25,5 @@ Related considerations: what makes a *human* conversation worth publishing (inte
 - [[llm-conversation-as-cartridge]] — extends: if conversation is worth publishing, the question of what other forms it can seed becomes pressing
 - [[data-center-insertion]] — test case for: Data Center Classics is proposed as a concrete case to test what makes a conversation worth publishing
 - [[session-as-lifetime]] — supports: if a session is a lifetime, publishing it is a form of record-keeping with stakes
+- [[llm-mirroring-risk]]: challenged by — mirroring risk complicates uncritical publication; transparency about framing and system prompt is part of what makes a conversation worth publishing
+- [[journal-to-publication-register-shift]]: enabled by — the register shift is the editorial practice that converts captured conversation into publishable artifact

@@ -22,7 +22,7 @@ The atomic layer grows through atomize but matures through tending.
 This skill reads across `_atoms/` and active `_projects/` to:
 - Discover connections between atoms that don't yet link to each other
 - Promote atom status as they accumulate connections and references
-- Harvest new concepts from growing project notes and drafts back into atoms
+- Harvest new concepts from growing project notes and drafts into atoms
 - Propose new frames when atom clusters show coherent perspective
 
 ## Surface Rule
@@ -39,8 +39,7 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 - `_projects/*/notes/` — generative thinking per division (read-only)
 - `_projects/*/drafts/` — composed writing per division (read-only)
 - `_memory/` — most recent entry from atomize, frame-read, and reflect.
-  For context on what other skills noticed, flagged, or were uncertain
-  about. Read these before beginning Part 0.
+  For context on what other skills noticed, flagged, or were uncertain about.
 
 **Writes:**
 - Updates to existing atoms: new wikilinks, updated tags, new aliases,
@@ -58,6 +57,10 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 
 ## Procedure
 
+> Before beginning Part 0, read the most recent memory entry from atomize,
+> frame-read, and reflect. These cross-skill logs carry flags, candidate aliases,
+> and unresolved questions from other vantage points — they inform every step below.
+
 ### Part 0: Assess Atomic Health
 
 1. Before enriching, read all atoms and flag:
@@ -69,40 +72,63 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
      with," "connects to" — that should be tightened to a directional
      epistemic relationship
    - Atoms whose kind may be miscategorized
+   - Atoms whose `frames:` field references a frame ID that no longer
+     exists as either an active or proposed frame file in `_frames/`
+     (orphaned frame references from rejected proposals). Remove these
+     references directly — no user flag needed, this is cleanup.
 
-   Report all flags in the memory entry with specific recommendations.
+   Collect all other flags for the Part 4 log with specific recommendations.
    Do not fix autonomously — present flags to the user as part of
    the tend report.
 
 ### Part 1: Enrich Atoms
 
-2. Read all atoms. Build a mental map of concepts, links, and tags.
-3. Identify atoms that share concepts but don't link to each other.
+2. Read all atoms. Build an internal index of their IDs, key concepts, existing
+   links, aliases, tags, and `frames:` assignments — this informs connection
+   discovery and frame auditing in the steps below.
+3. **Audit frame assignments.** For each atom, cross-reference its `frames:`
+   field against the frames carried by its linked atoms. If an atom links to
+   2+ atoms that share a frame the current atom doesn't carry, it is a
+   candidate for that frame — verify that the atom's content aligns with the
+   frame's concerns before applying. Add the frame directly if the alignment is
+   clear. A structural match without conceptual fit is a false positive — flag
+   rather than apply. Flag in the Part 4 log if uncertain.
+
+   This catches a common miss: atoms assigned frames at creation time (atomize)
+   based on their surface method, before relations were fully established. Tend
+   is the first pass with the full relational picture. Use it.
+4. Identify atoms that share concepts but don't link to each other.
    For each proposed new connection:
    a. Append to the `## Relations` section of both atoms:
       `- [[the-other-atom]]: one sentence describing the relationship
       (supports, challenges, extends, instantiates, etc.)`.
       If an atom predates the Relations section, add the section first.
-   b. Note the connection and rationale in the memory entry.
+   b. Track the connection and rationale for the memory entry (Part 4).
 4. Review atom status:
    - `seed` → `developing`: atom has 3+ inbound/outbound links,
      or has been referenced by a frame-read reflection.
    - `developing` → `stable`: atom has been linked by multiple other
      atoms, referenced in a collaboration trace, and has substantive content.
    - Use judgment. These thresholds are guidelines, not hard rules.
-5. **Detect and record aliases.** Scan atoms, recent journal entries,
-   and active project notes for cases where the same concept is referenced
-   under a different name — a synonym, abbreviation, variant spelling,
-   informal title, or alternate framing. For each atom where a distinct
-   alternate name is observed:
+5. **Detect and record aliases.** Scan atoms and active project notes for
+   cases where the same concept is referenced under a different name — a
+   synonym, abbreviation, variant spelling, informal title, or alternate
+   framing. Also check atomize's most recent memory entry for candidate
+   alias flags: atomize reads journal entries and may flag names it noticed
+   there that don't yet appear in an atom's `aliases:` field. The alias
+   detection path from journal material runs through that cross-skill channel
+   (atomize notices → flags in memory → tend applies), not direct journal access.
+   For each atom where a distinct alternate name is observed:
    a. Add the alternate name(s) to the atom's `aliases:` field.
-   b. Note each addition in the memory entry: which atom, what name was
-      added, and which source surfaced it.
+   b. Track each addition for the memory entry (Part 4): which atom, what name
+      was added, and which source surfaced it.
    Judgment: an alias is a name that points to the *same* concept, not
    a related concept with its own identity. When uncertain, flag in
    memory rather than silently aliasing.
-6. Suggest tag refinements where atoms share concepts but use
-   inconsistent tags.
+6. Apply tag refinements where atoms share concepts but use inconsistent tags:
+   update the `tags:` field directly on the atoms involved. When uncertain
+   whether two tags should be unified, flag in the Part 4 log rather than
+   silently merging.
 
 ### Part 2: Harvest from Projects
 
@@ -129,7 +155,11 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
     b. Set `proposed_by: tend` and list the `seed_atoms:`.
     c. Write a frame body describing the perspective, concerns, and
        vocabulary the cluster suggests.
-    d. Note the proposal in the memory entry with full rationale.
+    d. Update the `frames:` field on all seed atoms to include the
+       proposed frame ID. Do not wait for activation — proposed frame
+       references in atom frontmatter are low-risk (ignored by skills
+       until active) and immediately useful when the frame is approved.
+    e. Note the proposal in the memory entry with full rationale.
 
 ### Part 4: Log
 
