@@ -65,10 +65,10 @@ jobs:
               - visual-description
           ---
 
-          Source URL: $URL
+          ## Source
+          [Open Instagram reel]($URL)
 
           ## Why I grabbed this
-
           $WHY
 
           ## Notes
