@@ -1,0 +1,101 @@
+name: Create Instagram inbox note
+
+  on:
+    issues:
+      types: [opened]
+
+  permissions:
+    contents: write
+    issues: write
+
+  jobs:
+    create-note:
+      if: contains(github.event.issue.title, 'IG capture')
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Check out repo
+          uses: actions/checkout@v4
+
+        - name: Create inbox note
+          shell: bash
+          run: |
+            mkdir -p _inbox
+
+            ISSUE_BODY=$(mktemp)
+            cat > "$ISSUE_BODY" <<'EOF'
+            ${{ github.event.issue.body }}
+            EOF
+
+            URL=$(grep '^URL:' "$ISSUE_BODY" | sed 's/^URL: //')
+            WHY=$(awk '/^Why I grabbed this:/{flag=1; next} flag {print}'
+  "$ISSUE_BODY")
+
+            DATE=$(date -u +"%Y-%m-%d")
+
+            SLUG=$(echo "$URL" | sed -n 's#.*reel/\([^/?]*\).*#\1#p')
+            if [ -z "$SLUG" ]; then
+              SLUG="capture"
+            fi
+
+            MAX_NUM=$(find _inbox -maxdepth 1 -type f -name "${DATE}_ig_*.md" |
+  \
+              sed -n "s#.*${DATE}_ig_\\([0-9][0-9][0-9]\\)\\.md#\\1#p" | \
+              sort | tail -n 1)
+
+            if [ -z "$MAX_NUM" ]; then
+              NUM="001"
+            else
+              NUM=$(printf "%03d" $((10#$MAX_NUM + 1)))
+            fi
+
+            FILE="_inbox/${DATE}_ig_${NUM}.md"
+
+            cat > "$FILE" <<EOF
+            ---
+            type: inbox
+            subtype: reference
+            from: user
+            responds_to:
+            title: "Instagram reel: $SLUG"
+            created: $DATE
+            processed: false
+            capture_hints:
+              platform: instagram
+              wants:
+                - transcript
+                - visual-description
+            ---
+
+            Source URL: $URL
+
+            ## Why I grabbed this
+
+            $WHY
+
+            ## Notes
+
+            <!-- Optional first impressions, transcript fragments, or visual
+  description -->
+            EOF
+
+        - name: Commit note
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-
+  actions[bot]@users.noreply.github.com"
+            git add _inbox/*.md
+            git commit -m "Add Instagram inbox note from issue
+  #${{ github.event.issue.number }}" || exit 0
+            git push
+
+        - name: Close issue
+          uses: actions/github-script@v7
+          with:
+            script: |
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                state: 'closed'
+              })
