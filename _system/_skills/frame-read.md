@@ -70,10 +70,25 @@ or "frame-read [frame-name]."
 2. Read past reflections for this frame in `_memory/` (files where
    `frame: [frame-name]`). Note what was observed last time.
 
-3. Read all atoms. For each, ask through the frame's lens:
-   - Does this atom fall within this frame's concerns?
-   - What does this frame see in it that a generic reading might miss?
+3. Read `_atoms/_index.md`. Identify atoms within this frame's
+   territory — atoms grouped under this frame, plus atoms in the
+   unframed section or other frames whose summary suggests
+   relevance to this frame's concerns. Use semantic matching
+   against the frame's vocabulary, not just the frame grouping.
+
+   Read the full prose of identified atoms. For each, ask through
+   the frame's lens:
+   - What does this frame see in it that a generic reading might
+     miss?
    - How does it connect to other atoms this frame cares about?
+
+   Follow relations outward from relevant atoms to discover
+   connected atoms not surfaced by the initial index scan. Read
+   those in full when the connection is promising.
+
+   If the index is stale or missing, fall back to reading all
+   atoms directly. Note this in the memory entry so tend knows
+   to regenerate.
 
 4. For atoms with relevant connections, follow provenance links to
    `_journal/` entries to understand origin and context where needed.

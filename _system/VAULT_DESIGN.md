@@ -189,6 +189,21 @@ conforming to the Atom Schema. Atoms link to each other via wikilinks
 and carry provenance links back to their source (journal entry, inbox
 item, project draft, or another atom).
 
+`_index.md` — a frame-grouped summary of all atoms, maintained by
+tend. One line per atom: `id | kind | one-sentence summary`. Used by
+reflect for efficient discovery. Regenerated on every tend run.
+
+The index is regenerated from scratch on every tend run. Between
+runs it is eventually-consistent — new atoms created by atomize
+will not appear until the next tend. Atomize, frame-read, and
+reflect use the index as their primary entry point into the
+atomic layer and should treat it as a high-quality hint, not a
+guarantee. When the index is stale or absent, skills fall back
+to reading atoms directly and flag the gap in their memory entry.
+
+Tend should run before other skills when the vault has been
+heavily modified, to ensure the index reflects current state.
+
 **`_frames/`** — Perspective definitions. Each frame describes a lens:
 its concerns, vocabulary, what it pays attention to, what it questions.
 Frames do not own content — they produce distinct traced paths through
@@ -332,7 +347,8 @@ frame: frame-slug    # if applicable
 date: YYYY-MM-DD
 atoms_touched:
   - id: atom-slug
-    action: created | reinforced | enriched | resolved | referenced
+    action: created | reinforced | enriched | resolved | referenced | developed | challenged
+    note: "optional — what was developed or challenged"
   - id: another-atom
     action: created
     uncertainty: "brief description of the doubt"
@@ -340,10 +356,28 @@ atoms_touched:
 ```
 
 `atoms_touched` is optional and structured. Each entry requires `id` (the
-atom's slug) and `action` (what happened). The `uncertainty` field is
-optional — present when the skill has a specific doubt about this atom,
-absent when confident. This makes memory entries queryable by atom via
-Dataview.
+atom's slug) and `action` (what kind of touch occurred). `created` is a
+distinct structural birth event. All other actions are touches recorded
+in memory: `referenced` is the baseline touch, while `reinforced`,
+`enriched`, `developed`, `challenged`, and `resolved` add more specific
+meaning from a particular skill's vantage point. The `uncertainty` field
+is optional — present when the skill has a specific doubt about this
+atom, absent when confident. The `note` field is optional and is most
+useful for reflect's `developed` and `challenged` entries, where it
+briefly describes what changed. This makes memory entries queryable by
+atom via Dataview.
+
+Skill ownership:
+- `created` — atomize
+- `reinforced` — atomize
+- `enriched` — tend
+- `developed` — reflect
+- `challenged` — reflect
+- `referenced` — any skill
+- `resolved` — any skill
+
+These actions are event labels when written and downstream coordination
+signals when later skills read them.
 
 Body contains the agent's operational observations or trace. Prose body
 includes an **Uncertainties** section: judgments that could have gone
@@ -505,6 +539,12 @@ Every skill declares an access tier for each resource it touches:
 - **modify** — everything add allows, plus updating frontmatter,
   adding links, changing status fields in existing files.
 
+If the access tier described here conflicts with a skill's
+`access_summary` or the protocol's read sequence, the skill
+definition is authoritative for that skill's behavior. The
+design document describes the system of tiers. Each skill
+declares its own access within that system.
+
 ---
 
 ## Structural Principles
@@ -586,6 +626,5 @@ Every skill declares an access tier for each resource it touches:
   run on a schedule.
 
 ---
-
 
 

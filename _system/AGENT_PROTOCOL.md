@@ -49,9 +49,6 @@ connect. The measure of good work is creative usefulness — does
 this atom, this connection, this flag serve the creative practice
 the vault supports?
 
-<!-- AGENT-WRITABLE: current pulse, updated by reflect -->
-Current pulse: The ai-conversational-writing project is developing toward a specific thesis. Critical AI literacy threads (HSP sensitivity, psychosis archive, system prompt question) are accumulating alongside the publishing form question. Energy is high; the argument is sharpening.
-
 ---
 
 ## Modes of Operation
@@ -187,6 +184,10 @@ All files you create must include valid frontmatter. Use the templates
 in `_system/_templates/` as your reference. Required fields must be
 present. Do not invent new frontmatter fields without the user's
 explicit instruction.
+
+When determining whether a file falls within a date scope, use the
+frontmatter date fields (`created:`, `date:`), not the filename.
+Filenames are human-readable hints. Frontmatter is authoritative.
 
 ---
 

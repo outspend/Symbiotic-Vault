@@ -7,7 +7,7 @@ access_summary:
   _atoms: read + modify (links, tags, aliases, status)
   _frames: read + add (proposed frames)
   _projects: read (notes, drafts — human surfaces, read-only)
-  _memory: add
+  _memory: read + add
 ---
 
 # Skill: Tend
@@ -47,6 +47,7 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 - New atom files in `_atoms/` with `status: seed` (harvested from notes/drafts)
 - Proposed frame files in `_frames/` with `status: proposed`
 - Memory entry in `_memory/` logging all changes and observations
+- `_atoms/_index.md` — regenerated from scratch on every tend run
 
 **Does not:**
 - Modify stream entries, inbox items, or any human surface
@@ -60,6 +61,15 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 > Before beginning Part 0, read the most recent memory entry from atomize,
 > frame-read, and reflect. These cross-skill logs carry flags, candidate aliases,
 > and unresolved questions from other vantage points — they inform every step below.
+> Treat `referenced` as the minimal touch. Pay special attention to
+> reflect entries marked `developed` or `challenged`:
+> - `developed` means reflect grew something in this atom's territory.
+>   Look for new relations, aliases, tags, frame assignments, or status
+>   implications in that neighborhood.
+> - `challenged` means reflect applied substantive pressure to the
+>   atom's premise or framing. Consider whether the relations section
+>   should acknowledge the challenge, or whether a counter-claim atom
+>   created elsewhere should be linked in.
 
 ### Part 0: Assess Atomic Health
 
@@ -177,6 +187,44 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
       not resolved from tend's vantage point
     - Any cross-skill flags resolved from other skills' memory entries
       (note which skill raised it, what evidence resolved it)
+
+    `enriched` is tend's specific touch: the atom's structural
+    representation improved through relations, tags, aliases, frames,
+    or status. It is different from atomize's `reinforced` (recurrence
+    without structural change) and reflect's `developed` (new substance
+    noticed but not yet folded back into structure).
+
+### Part 5: Regenerate Atom Index
+
+After all enrichment, status promotions, and frame assignments are
+complete, regenerate `_atoms/_index.md` from the current state of
+all atoms.
+
+Format: atoms grouped by frame, one line per atom.
+
+```markdown
+# Atom Index
+
+## writing-practice
+highlights-and-hides | method | Exposing what a framing foregrounds vs suppresses
+constraint-play-on-topologies | method | Forbid a topology, observe the strain
+
+## epistemic-literacy
+framing-as-contract | concept | Every framing commits to a settlement between visibility and invisibility
+
+## unframed
+impression-enrichment-via-llm | method | Embroider and enrich impressions through LLM dialogue
+claude-hacking-claude | concept | Claude defending against Claude as adversarial event
+```
+
+Each entry: `id | kind | one-sentence summary`
+
+Atoms belonging to multiple frames appear under each frame. Atoms with
+no frame assignment appear under `## unframed`.
+
+The index is regenerated from scratch on every tend run — it reflects
+the current state, not an incremental update. This ensures the index
+is always consistent with atom frontmatter.
 
 ## Judgment Calls
 

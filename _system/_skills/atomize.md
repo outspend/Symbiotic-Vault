@@ -48,15 +48,37 @@ frontmatter, wikilinks, and provenance.
 
 1. Read `_system/_templates/atom.md` for the atom schema.
 
-2. Read existing atoms in `_atoms/` to build awareness of what already
-   exists. Note their IDs, aliases, tags, and key concepts.
+2. Read `_atoms/_index.md` to build awareness of what already
+   exists. The index lists every atom by frame grouping with ID,
+   kind, and one-sentence summary. Use it to identify potential
+   duplicates and connection targets before reading full atom
+   prose.
+
+   When a candidate concept from the source material plausibly
+   matches an existing atom (by ID, summary, or semantic overlap),
+   read that atom's full prose and aliases to confirm or rule out
+   duplication. Do not read every atom in full — use the index as
+   the entry point and read selectively.
+
+   If the index is stale or missing, fall back to reading all
+   atoms directly. Note this in the memory entry so tend knows
+   to regenerate.
 
 3. Read the most recent memory entry from tend, frame-read, and
-   reflect for cross-skill context.
+   reflect for cross-skill context. Treat `referenced` as a generic
+   touch and pay special attention to reflect entries marked
+   `developed` or `challenged`:
+   - `developed` means reflect added new substance in this atom's
+     territory. Check nearby journal and inbox material for
+     extractable concepts or claims that deserve a new atom.
+   - `challenged` means reflect questioned the atom's premise or
+     framing. Check whether the challenge introduces a distinct
+     counter-claim or new concept that deserves its own atom.
 
 4. Scan the specified sources. If the user specified a scope, follow
-   it. Otherwise, scan all unprocessed inbox items and journal entries
-   from the last 7 days.
+   it. Otherwise, scan all inbox items where `processed:` is `false`
+   (determined by frontmatter, not filename) and journal entries from
+   the last 7 days.
 
 5. **Classify each inbox item.** Two independent assessments:
 
@@ -90,9 +112,11 @@ frontmatter, wikilinks, and provenance.
    For each candidate:
    a. Check if an existing atom already covers it — compare against
       each atom's `id`, prose body, and `aliases:` field. If a match
-      is found, note reinforcement in the memory entry. If the source
-      uses a name not yet in the atom's `aliases:`, flag it as a
-      candidate alias for tend.
+      is found, note reinforcement in the memory entry. `reinforced`
+      is atomize's specific touch for repeated appearance: the concept
+      showed up again, but no new atom was needed. If the source uses
+      a name not yet in the atom's `aliases:`, flag it as a candidate
+      alias for tend.
    b. Assess whether the concept is a *concept* (descriptive, stable)
       or a *claim* (positioned, arguable). Set `kind:` accordingly.
       If a claim references a concept that doesn't yet have its own

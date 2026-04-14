@@ -546,7 +546,8 @@ atoms were involved:
 ```yaml
 atoms_touched:
   - id: atom-slug
-    action: created | reinforced | enriched | resolved | referenced
+    action: created | reinforced | enriched | resolved | referenced | developed | challenged
+    note: "optional — what was developed or challenged"
   - id: another-atom
     action: created
     uncertainty: "brief description of the doubt"
@@ -555,6 +556,12 @@ atoms_touched:
 This makes the memory layer and the atomic layer a single
 queryable system. Skills scan frontmatter (tier 1) for broad
 questions and read full prose (tier 2) for narrative context.
+`created` is distinct: the atom entered the structured layer.
+All other values are kinds of touch. `referenced` is the minimal
+touch; `reinforced`, `enriched`, `developed`, `challenged`, and
+`resolved` add more specific meaning about what kind of touch
+occurred. These are event labels when written and downstream
+signals when later skills read memory.
 
 ### Patterns Visible Through atoms_touched
 
