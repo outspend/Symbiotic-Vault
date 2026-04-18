@@ -48,6 +48,7 @@ them. All writes go to `_atoms/`, `_frames/` (proposed), and `_memory/`.
 - Proposed frame files in `_frames/` with `status: proposed`
 - Memory entry in `_memory/` logging all changes and observations
 - `_atoms/_index.md` — regenerated from scratch on every tend run
+- `_frames/_index.md` — regenerated from scratch on every tend run
 
 **Does not:**
 - Modify stream entries, inbox items, or any human surface
@@ -225,6 +226,42 @@ no frame assignment appear under `## unframed`.
 The index is regenerated from scratch on every tend run — it reflects
 the current state, not an incremental update. This ensures the index
 is always consistent with atom frontmatter.
+
+### Part 6: Regenerate Frame Index
+
+After regenerating the atom index, regenerate `_frames/_index.md`
+from the current state of all frame files.
+
+Format: frames grouped by status. Each frame gets a compact discovery
+entry, not a duplicate of the full frame definition.
+
+```markdown
+# Frame Index
+
+## active
+
+### writing-practice
+summary: Writing as a repeatable practice of attention, form, and revision.
+concerns: draft structure, genre, audience, revision, voice
+questions: What form does this idea want, and what does the writing make newly visible?
+
+## proposed
+
+### speculative-interface
+summary: Interfaces as arguments about attention and agency.
+concerns: interaction patterns, user agency, ambiguity, legibility
+questions: What behavior does this interface invite or suppress?
+```
+
+Build each entry from the frame's `## Perspective`, `## Concerns`,
+`## Vocabulary`, and `## What This Frame Questions` sections. Keep
+entries short enough for discovery. Do not invent new concerns that
+are not supported by the frame definition.
+
+The frame index is regenerated from scratch on every tend run — it
+reflects the current frame set, not an incremental update. This gives
+reflect and frame-read a lightweight way to discover relevant frames
+without opening every full frame definition first.
 
 ## Judgment Calls
 

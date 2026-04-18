@@ -394,6 +394,21 @@ but they are not themselves threads. The human can *start* a
 thread in response to a reflection (the reply mechanism), but
 the reflection itself is immutable prose, not a conversation.
 
+**Design concern from reflect-v07 testing:** Reflection currently
+does interim thread maintenance because `## Threads` and reply files
+are the available surface. This is workable but creates a tension:
+a reflection has a whole, while active discussions have independent
+lifecycle. In-scope material such as draft feedback may need to stay
+active without becoming part of the day's reflective arc.
+
+Future thread architecture should let `reflect` create or update
+thread objects with context/history seeds, status, and resurfacing
+rules, while allowing the reflection prose to surface only the
+Threads that belong to the current reading experience. Active
+threads should be independently snoozable, carried, resolved, or
+resurfaced without forcing every active discussion into every
+reflection.
+
 ### _chronicle/ — narrativizes events
 
 The chronicle subscribes to events and writes cards when
