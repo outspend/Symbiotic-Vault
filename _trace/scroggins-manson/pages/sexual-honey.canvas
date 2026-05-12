@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"p3-group","type":"group","x":-100,"y":-320,"width":3300,"height":2240,"label":"sexual-honey r1 prompt package"},
+		{"id":"98bcfe902528b9fe","type":"group","x":1340,"y":-73,"width":440,"height":587,"label":"style, mike, charlie ref"},
+		{"id":"p3-current-card","type":"text","text":"CURRENT SCRIPT\n\nNEW P3 — \"Honey\" (the sexual trap)\n\nPurpose:\ninsert a page between Charlie's gravity / jacket and Billy's literal honey page so the first lure is sexual access with Charlie watching.\n\nPanel 1:\nSadie leads Mike by the hand toward the hanging bed. Daytime. House busy around them. Mike's suede jacket stays on.\nCaption: \"In the daytime, sometimes the girls would invite me in.\"\n\nPanel 2:\nMike and Sadie on the hanging bed. Public. Other people in the room continue working and glancing over without stopping. Mike's jacket is folded near him on the bed.\nCaption: \"It was on a hanging bed. Very public.\"\n\n~~Panel 3 — LOAD-BEARING:~~\n~~Charlie seen through an interior doorway, guitar in lap but not playing. Eyes up, looking across toward Mike. Calculating, attentive, recruiter clocking a holdout.~~\n~~Caption: \"Charlie was about not owning things. Not jackets. Not bodies.\"~~\n\nPanel 3 — LOAD-BEARING:\nCharlie seen through the nearby window. Calculating, attentive, recruiter clocking a holdout.\nCaption: \"Something felt... I dont know... out of place\"\n\nPanel 4:\nMike walking out into Topanga afternoon light. Jacket back on, looking once over his shoulder.\n~~Caption: \"It felt weird. I didn't want to do it again.\"~~\nCaption:  \"Every night I took my jacket and headed home.\"","x":-40,"y":360,"width":1140,"height":980,"color":"4"},
+		{"id":"p3-prompt-note","type":"text","text":"PROMPT ATTENTION CONCERNS\n\nfunction:\nshow the sexual-honey lure and Charlie's observing presence before the literal honey page\n\nload-bearing image:\npanel 3 - Charlie looking in on Mike during the hanging-bed scene\n\nmust preserve:\nCharlie is visibly present as watcher\nMike's jacket remains part of the resistance logic\npublicness and oddness of the scene\n\nallowed to drift:\nroom detail, exact props, exact window placement, exact color accents\n\navoid:\np4 - mike leaving seeming disgusted or done with the experiment.  He returns after this","x":-40,"y":-160,"width":1140,"height":480,"color":"1"},
+		{"id":"p3-script-link","type":"file","file":"_trace/scroggins-manson/_notes/2026-04-29-new-p3-honey-script.md","x":-40,"y":1380,"width":420,"height":320,"color":"5"},
+		{"id":"p3-style-ref","type":"file","file":"_trace/scroggins-manson/_assets/page-02-current.jpeg","x":1360,"y":-53,"width":400,"height":267},
+		{"id":"c96bc4ece7d4ec57","type":"file","file":"_trace/scroggins-manson/_assets/page-01-current.jpeg","x":1360,"y":227,"width":400,"height":267},
+		{"id":"47e97062317fea1a","type":"file","file":"_trace/scroggins-manson/_assets/page-03-panel-02-hanging-bed.png","x":1560,"y":958,"width":399,"height":193},
+		{"id":"3d6cde140d4d8cee","type":"text","text":"p4 the current image is a good p4 AS IS","x":1760,"y":1640,"width":250,"height":60},
+		{"id":"ee625bc0e6a37b53","type":"file","file":"_trace/scroggins-manson/_assets/page-03-rough-layout.png","x":2400,"y":958,"width":428,"height":285},
+		{"id":"075a0dc15c4830f4","type":"file","file":"_trace/scroggins-manson/_assets/page-03-fullpage-variant-a.png","x":1560,"y":1267,"width":400,"height":267},
+		{"id":"c2d8fea9fb1899c8","type":"text","text":"for p1 \nalmost - i want this but with less people and she is  leading him to the purple hanging bed in the corner near a window ","x":1710,"y":600,"width":250,"height":155},
+		{"id":"p3-current-image","type":"file","file":"_trace/scroggins-manson/_assets/page-03-current.png","x":3360,"y":464,"width":1482,"height":988,"color":"2"}
+	],
+	"edges":[
+		{"id":"c47a0fbd8598524d","fromNode":"47e97062317fea1a","fromSide":"right","toNode":"ee625bc0e6a37b53","toSide":"left","label":"ref p2"},
+		{"id":"a87da3afa464b647","fromNode":"075a0dc15c4830f4","fromSide":"right","toNode":"ee625bc0e6a37b53","toSide":"left","label":"ref p3\nwants fg hanging purple bed frame left"},
+		{"id":"b240db3547952396","fromNode":"3d6cde140d4d8cee","fromSide":"right","toNode":"ee625bc0e6a37b53","toSide":"left"},
+		{"id":"38e783dc406f83e2","fromNode":"c2d8fea9fb1899c8","fromSide":"right","toNode":"ee625bc0e6a37b53","toSide":"left"},
+		{"id":"c4fba16daef6397a","fromNode":"p3-group","fromSide":"right","toNode":"p3-current-image","toSide":"left"}
+	]
+}

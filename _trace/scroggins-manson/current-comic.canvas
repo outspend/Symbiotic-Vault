@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"canon-group","type":"group","x":-120,"y":-220,"width":5860,"height":2440,"label":"CURRENT COMIC / CANON"},
+		{"id":"canon-intro","type":"text","text":"CURRENT COMIC\n\nThis canvas is for at-a-glance state, not the full chase.\n\nRule: one current page object per page.\nRule: when image and prior script diverge, the image revision is canon and the drift is named here.","x":80,"y":-120,"width":1220,"height":220,"color":"4"},
+		{"id":"page1-card","type":"text","text":"P1  locked\nfunction: discovery and scene enchantment\nload-bearing idea: the approach to the fire across the creek\nkeeper: `page-01-current.jpeg`","x":80,"y":220,"width":760,"height":240,"color":"4"},
+		{"id":"page2-card","type":"text","text":"P2  locked\nfunction: Charlie's gravity and Mike's jacket-as-resistance\nload-bearing idea: communal room organized around Charlie, with Mike holding back\nkeeper: `page-02-current.jpeg`","x":1020,"y":220,"width":760,"height":280,"color":"4"},
+		{"id":"page1-image","type":"file","file":"_trace/scroggins-manson/_assets/page-01-current.jpeg","x":259,"y":660,"width":621,"height":414},
+		{"id":"status-note","type":"text","text":"STATUS VOCABULARY\n\nlocked = current unless new evidence compels change\nsoft = current, but still plausibly editable\ndrifting = current image exists, but the read may not align cleanly with what the page must carry\ncandidate = locally useful, not canon yet\n\nThis is intentionally lighter than a full schema. It is just enough to support prompt extraction and page triage.","x":80,"y":1180,"width":1320,"height":440,"color":"5"},
+		{"id":"page2-image","type":"file","file":"_trace/scroggins-manson/_assets/page-02-current.jpeg","x":1190,"y":660,"width":590,"height":393},
+		{"id":"c9cd16da25eec670","type":"file","file":"_trace/_assets/schematic_page_4/output/rad.png","x":3040,"y":797,"width":750,"height":500},
+		{"id":"page5-image","type":"file","file":"_trace/scroggins-manson/_assets/page-05-current.jpeg","x":4080,"y":873,"width":520,"height":347},
+		{"id":"f5f85c84b99b485f","type":"file","file":"_trace/scroggins-manson/_assets/7217BB40-362B-4B84-A683-7B5E8160198A.png","x":2100,"y":804,"width":746,"height":497},
+		{"id":"page3-card","type":"text","text":"P3  soft\nfunction: make the honey-trap mechanism textual and reinforce mikes self possession\n\n","x":1960,"y":260,"width":940,"height":420,"color":"4"},
+		{"id":"page6-card","type":"text","text":"P6  locked\nfunction: exhale, aftermath, closing echo\nload-bearing idea: landscape breath plus the murders becoming public\nkeeper: `page-06-current.png`","x":4880,"y":200,"width":760,"height":260,"color":"4"},
+		{"id":"page6-image","type":"file","file":"_trace/scroggins-manson/_assets/page-06-current.png","x":5000,"y":702,"width":520,"height":345},
+		{"id":"page4-card","type":"text","text":"P4  soft\nfunction: literal honey as mirror lure and commune exchange\n","x":3040,"y":220,"width":760,"height":320,"color":"4"},
+		{"id":"page5-card","type":"text","text":"P5  soft\nfunction: Charlie presents the loyalty test\nload-bearing idea: the face / feet / solitude sequence\nkeeper: `page-05-current.jpeg`\nstatus: strong dramatic center, still polishable","x":3960,"y":220,"width":760,"height":280,"color":"4"}
+	],
+	"edges":[
+		{"id":"e-page1","fromNode":"page1-card","fromSide":"bottom","toNode":"page1-image","toSide":"top","label":"keeper"},
+		{"id":"e-page5","fromNode":"page5-card","fromSide":"bottom","toNode":"page5-image","toSide":"top","label":"keeper"},
+		{"id":"e-page6","fromNode":"page6-card","fromSide":"bottom","toNode":"page6-image","toSide":"top","label":"keeper"},
+		{"id":"b44353133ab3e679","fromNode":"page4-card","fromSide":"bottom","toNode":"c9cd16da25eec670","toSide":"top"},
+		{"id":"fb6a73fc4df4522c","fromNode":"page3-card","fromSide":"bottom","toNode":"f5f85c84b99b485f","toSide":"top"},
+		{"id":"7d91ef1ebc52900e","fromNode":"page2-card","fromSide":"bottom","toNode":"page2-image","toSide":"top"}
+	]
+}

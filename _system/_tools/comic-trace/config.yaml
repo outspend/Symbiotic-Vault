@@ -1,0 +1,27 @@
+# comic-trace default configuration
+
+prototype_canvas: _trace/2026-04-22-scroggins-manson-comic-provenance.canvas
+
+# Lane y-centers (horizontal bands; content flows left-to-right)
+lanes:
+  ARTIFACTS:
+    y_center: 0
+  TRANSITIONS:
+    y_center: 1000
+  ANNOTATIONS:
+    y_center: -600
+
+# Obsidian canvas color values
+colors:
+  vault_file: null      # no color field = default cyan
+  external: "2"         # orange
+  annotation: "1"       # color 1 (prototype calls this purple)
+  iteration: "6"        # in-progress / notable artifact
+
+node_defaults:
+  file:
+    width: 400
+    height: 400
+  text:
+    width: 320
+    height: 140

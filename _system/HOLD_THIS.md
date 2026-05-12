@@ -184,6 +184,86 @@ and journal likely want different plugin affordances, and
 the inbox may not need a plugin at all (it's already a
 drop zone).
 
+### Three kinds of memory want different infrastructure
+
+Not everything called "memory" is the same thing. The vault
+has three distinct layers, each with different needs:
+
+**Operational memory** — skill memory entries, atoms_touched,
+event logs. Structured, queryable, event-shaped. Already in
+YAML frontmatter. This layer wants SQLite or similar when
+query complexity outgrows Dataview. It's the most
+database-shaped thing in the vault. Jim is right that this
+wants preprocessing.
+
+**Material memory** — atoms, relations, provenance chains.
+The creative knowledge layer. Structured frontmatter but the
+value is in the prose and the relations. The index is the
+compressed queryable view. The full prose is what the
+intelligent reader engages with. Almost a knowledge graph
+already. Could formalize into actual KG when density warrants.
+
+**Narrative/interpretive memory** — reflections, chronicle
+cards, frame-read reflections. The meaning layer. Prose,
+editorial, developing over time. Cannot become a database
+without losing what makes it valuable. This is what the
+intelligent reader (the LLM) is for.
+
+**The KG insight:** If a KG is eventually built to enable
+the séance (frame-as-subagent), it should encode *attention
+patterns*, not just facts. Not "atom X relates to atom Y"
+but "the writing-practice frame has referenced atom X seven
+times, connected it to Y through constraint, and never
+mentioned Z despite structural adjacency." The KG that
+matters for creative performance is built from the
+interpretive layer (frame-reads, reflections, chronicle),
+not from the material layer (atoms alone).
+
+**The sequence:** Operational memory moves to SQLite first
+(most query-shaped). Interpretive layer gets extracted into
+a KG when the séance needs it. Atoms stay in markdown
+(what the reader reads, what the human browses). Chronicle
+stays in markdown (narrative is prose). Different layers,
+different storage, unified by the orchestrator.
+
+### Frame-reads: cold-start problem flagged
+
+The interpretive layer accumulates over time. A single
+frame-read is a snapshot. Ten frame-reads across three
+months is a developing perspective. The séance needs the
+latter. The chronicle needs the latter.
+
+**The cold-start:** The event-driven trigger (tend enriches
+3+ atoms in frame territory → fire frame-read) needs a
+baseline to compare against. No baseline exists until the
+first frame-read runs.
+
+**Action (Phase 1):** After the orchestrator feels natural,
+run one frame-read per active frame to establish baselines.
+These first reads also test the frame-read spec against
+real content (flagged as needed in the review). After
+baselines exist, event-driven triggers take over.
+
+Early reads will be thin — that's fine. The delta between
+reads is how the interpretive layer gains depth. The
+progression from thin to rich IS the frame becoming
+inhabitable.
+
+### Orphaned thread resurfacing
+
+Threads that go unanswered aren't dead — they're paused.
+A thread about "who are you writing for" that gets silence
+in March might become urgent in May when the project
+changes shape. The orchestrator (or a compost-adjacent
+process) should resurface paused threads when new vault
+context arrives — a journal entry that touches the same
+territory, a probe that discovers a connection. The thread
+resurfaces because the vault noticed relevance, not because
+of a schedule. Natural decay: threads that never get
+engagement and never get resurfaced by new context simply
+fade. No active pruning needed unless the human explicitly
+closes a thread.
+
 ---
 
 ## The Path (rewritten with the destination in mind)

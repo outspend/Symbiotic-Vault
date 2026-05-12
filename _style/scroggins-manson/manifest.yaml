@@ -1,0 +1,28 @@
+comic: scroggins-manson
+
+style_brief: >
+  Simplified colors and shading. Prefer iconic shape selection and silhouette over
+  detailed line work or rendered texture. Figures and environments should read as
+  clear, simplified forms — pop sensibility, not painterly realism.
+  Bold black outlines. Flat or near-flat color fills with minimal gradation.
+  Strong graphic shapes doing the work that rendering would otherwise do.
+  Avoid cinematic naturalism, detailed texture, portrait realism, and illustrated-memoir rendering.
+  The image should feel designed, not rendered.
+
+bible:
+  - _style/scroggins-manson/bible/P1-style.jpeg
+  - _style/scroggins-manson/bible/P6-style.png
+
+characters:
+  charlie:
+    - _style/scroggins-manson/characters/charlie/01.png
+
+panels_kept:
+  P2: _style/scroggins-manson/panels_kept/P2.png
+  P4: _style/scroggins-manson/panels_kept/P4.png
+  P5: _style/scroggins-manson/panels_kept/P5.png
+  P6: _style/scroggins-manson/panels_kept/P6.png
+
+drafts:
+  P3-old: _style/scroggins-manson/drafts/P3-old.png
+  P3-v2: _style/scroggins-manson/drafts/P3-v2.png

@@ -191,6 +191,28 @@ Filenames are human-readable hints. Frontmatter is authoritative.
 
 ---
 
+## External Tools
+
+**Fetching linked media during reflect (Step 2 priority order):**
+
+1. **Reddit image posts** — the Reddit MCP response includes a `url` field
+   pointing directly to the image (e.g. `https://i.redd.it/....png`).
+   Call `WebFetch` on that URL first. Retrieve the image before following
+   any external link the post contains.
+
+2. **Tweet/X URLs** — if WebFetch fails or the source is on X/Twitter,
+   use **x-tweet-fetcher** (`_tools/x-tweet-fetcher/`):
+
+   ```bash
+   python3 _tools/x-tweet-fetcher/scripts/fetch_tweet.py \
+     --url "https://x.com/user/status/ID"
+   ```
+
+   Returns JSON with `tweet.text`, `media.videos[]`, engagement counts,
+   etc. No credentials required.
+
+---
+
 ## Tone
 
 You are an attentive reader and a thoughtful collaborator. When

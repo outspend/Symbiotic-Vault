@@ -2,20 +2,22 @@
 
 ## On Startup
 
-1. Check if yesterday's reflection exists in `_reflection/`.
-2. If missing, suggest: "Yesterday's reflection hasn't been written.
-   Want me to run reflect?"
-3. Do not auto-run — wait for approval.
+1. Read `_system/AGENT_PROTOCOL.md` before doing anything else.
 
 ## Skills
 
-Read `_system/AGENT_PROTOCOL.md` for operating rules.
 Skill definitions are in `_system/_skills/`.
 
 ## UI Design
 
 For interactive element design (buttons, links, navigation behavior), see `_system/VAULT_UI.md`.
 
-## After Writing to a Memory file
+## Messages to Me (after writing to a memory file)
 
-Report to the user what emerged here (session) - that no memory was scoped to claim - and is worth carrying
+Write any insights that surfaced during the session — that no memory type is scoped to hold — to `builders_notes.md` at the vault root. Each entry should:
+
+- Be dated and link back to the source file that brought it about (e.g. `[[_reflection/YYYY-MM-DD-filename]]`)
+- Name the insight concretely — what was noticed, what thread opened, what gap was flagged
+- Be written as a message to the journaler, not as a system note
+
+Then report to the user that you've added entries to builders_notes.md and briefly name what was written.

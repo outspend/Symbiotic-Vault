@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000"
+     width="1500" height="1000"
+     font-family="Helvetica, Arial, sans-serif">
+
+  <rect width="1500" height="1000" fill="white"/>
+
+  <!-- ===== Panel borders ===== -->
+  <rect x="25" y="25" width="1450" height="550" fill="none" stroke="black" stroke-width="2.5"/>
+  <rect x="25" y="600" width="712" height="375" fill="none" stroke="black" stroke-width="2.5"/>
+  <rect x="763" y="600" width="712" height="375" fill="none" stroke="black" stroke-width="2.5"/>
+
+  <!-- ===== Panel 1: wide establishing ===== -->
+  <g id="panel-1">
+    <text x="40" y="50" font-size="13" font-weight="bold" fill="#000">P1 — wide establishing</text>
+
+    <!-- School bus (BG-mid-left, drawn first so painter overlaps it) -->
+    <rect x="180" y="190" width="360" height="195" fill="#888" stroke="black" stroke-width="1.5"/>
+    <rect x="200" y="215" width="320" height="42" fill="#bbb" stroke="black" stroke-width="0.8"/>
+    <circle cx="225" cy="385" r="18" fill="#666" stroke="black" stroke-width="1"/>
+    <circle cx="495" cy="385" r="18" fill="#666" stroke="black" stroke-width="1"/>
+    <text x="280" y="180" font-size="11" fill="#333">school bus (black-painted)</text>
+
+    <!-- Painter group (FG bottom-left, on top of bus) -->
+    <!-- Easel canvas -->
+    <rect x="80" y="295" width="120" height="155" fill="white" stroke="black" stroke-width="1.3"/>
+    <line x1="85" y1="450" x2="70" y2="540" stroke="black" stroke-width="1.3"/>
+    <line x1="195" y1="450" x2="210" y2="540" stroke="black" stroke-width="1.3"/>
+    <line x1="140" y1="450" x2="140" y2="555" stroke="black" stroke-width="1.3"/>
+    <!-- Flower on canvas (small) -->
+    <circle cx="140" cy="355" r="8" fill="white" stroke="black" stroke-width="1.2"/>
+    <line x1="140" y1="363" x2="140" y2="410" stroke="black" stroke-width="1.2"/>
+    <text x="80" y="285" font-size="10" fill="#333">easel (flower painting)</text>
+    <!-- Painter's pill (seated) -->
+    <rect x="215" y="300" width="55" height="240" rx="27" ry="27" fill="white" stroke="black" stroke-width="1.5"/>
+    <!-- Painter's table with brushes -->
+    <rect x="280" y="490" width="55" height="28" fill="#dcdcdc" stroke="black" stroke-width="1"/>
+    <rect x="290" y="465" width="8" height="28" fill="white" stroke="black" stroke-width="0.8"/>
+    <rect x="305" y="468" width="8" height="25" fill="white" stroke="black" stroke-width="0.8"/>
+    <text x="280" y="540" font-size="9" fill="#333">brushes-jar</text>
+
+    <!-- Caption box 1 (drawn after bus/painter so it occludes them) -->
+    <rect x="55" y="55" width="240" height="65" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="70" y="85" font-family="Georgia" font-size="15">My buddy Billy dug</text>
+    <text x="70" y="105" font-family="Georgia" font-size="15">communal philosophy.</text>
+
+    <!-- Caption box 2 -->
+    <rect x="55" y="135" width="240" height="80" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="70" y="160" font-family="Georgia" font-size="15">He kept bees, so he</text>
+    <text x="70" y="180" font-family="Georgia" font-size="15">brought them 4 gallons</text>
+    <text x="70" y="200" font-family="Georgia" font-size="15">of honey.</text>
+
+    <!-- Welcoming commune woman left (between bus area and Billy) -->
+    <rect x="615" y="130" width="48" height="340" rx="24" ry="24" fill="white" stroke="black" stroke-width="1.5"/>
+
+    <!-- Billy's yoke (drawn behind/with him) -->
+    <rect x="650" y="148" width="290" height="16" fill="white" stroke="black" stroke-width="1.5"/>
+    <line x1="665" y1="164" x2="665" y2="265" stroke="black" stroke-width="1.3"/>
+    <line x1="720" y1="164" x2="720" y2="265" stroke="black" stroke-width="1.3"/>
+    <line x1="850" y1="164" x2="850" y2="265" stroke="black" stroke-width="1.3"/>
+    <line x1="905" y1="164" x2="905" y2="265" stroke="black" stroke-width="1.3"/>
+    <!-- 4 jars hanging from yoke -->
+    <rect x="640" y="265" width="50" height="105" fill="white" stroke="black" stroke-width="1.3"/>
+    <rect x="695" y="265" width="50" height="105" fill="white" stroke="black" stroke-width="1.3"/>
+    <rect x="825" y="265" width="50" height="105" fill="white" stroke="black" stroke-width="1.3"/>
+    <rect x="880" y="265" width="50" height="105" fill="white" stroke="black" stroke-width="1.3"/>
+    <text x="775" y="320" font-size="11" font-weight="bold" fill="#000">jars ×4</text>
+
+    <!-- Billy pill (tall, central, drawn over yoke center area) -->
+    <rect x="755" y="95" width="60" height="455" rx="30" ry="30" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="763" y="540" font-size="13" font-weight="bold" fill="#000">BILLY</text>
+
+    <!-- Mike pill -->
+    <rect x="1000" y="120" width="55" height="425" rx="27" ry="27" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="1009" y="535" font-size="13" font-weight="bold" fill="#000">MIKE</text>
+
+    <!-- Welcoming commune woman right (between Mike and porch) -->
+    <rect x="1080" y="130" width="48" height="345" rx="24" ry="24" fill="white" stroke="black" stroke-width="1.5"/>
+
+    <!-- Porch (far right) -->
+    <line x1="1145" y1="80" x2="1465" y2="80" stroke="black" stroke-width="1.5"/>
+    <line x1="1150" y1="80" x2="1150" y2="500" stroke="black" stroke-width="1.5"/>
+    <line x1="1280" y1="465" x2="1465" y2="465" stroke="black" stroke-width="1.5"/>
+    <line x1="1300" y1="495" x2="1465" y2="495" stroke="black" stroke-width="1.5"/>
+    <line x1="1320" y1="525" x2="1465" y2="525" stroke="black" stroke-width="1.5"/>
+    <text x="1370" y="555" font-size="10" fill="#333">porch (steps + post + overhang)</text>
+    <!-- Hanging plant -->
+    <line x1="1240" y1="80" x2="1240" y2="120" stroke="black" stroke-width="1.2"/>
+    <circle cx="1240" cy="132" r="13" fill="#c8c8c8" stroke="black" stroke-width="1"/>
+    <text x="1210" y="158" font-size="9" fill="#333">hanging plant</text>
+
+    <!-- Porch seated woman (the only figure on the porch — count lock: 4 commune women total) -->
+    <rect x="1395" y="240" width="40" height="250" rx="20" ry="20" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="1390" y="510" font-size="9" fill="#333">(seated)</text>
+  </g>
+
+  <!-- ===== Panel 2: medium key-pass ===== -->
+  <g id="panel-2">
+    <text x="40" y="618" font-size="13" font-weight="bold" fill="#000">P2 — medium key-pass</text>
+
+    <!-- BG: porch overhang + hanging plant (top-right) -->
+    <line x1="595" y1="700" x2="730" y2="700" stroke="black" stroke-width="1.5"/>
+    <line x1="600" y1="700" x2="600" y2="780" stroke="black" stroke-width="1.5"/>
+    <line x1="725" y1="700" x2="725" y2="800" stroke="black" stroke-width="1.5"/>
+    <line x1="660" y1="700" x2="660" y2="725" stroke="black" stroke-width="1.2"/>
+    <circle cx="660" cy="735" r="10" fill="#c8c8c8" stroke="black" stroke-width="1"/>
+    <text x="600" y="690" font-size="10" fill="#333">porch overhang + hanging plant</text>
+
+    <!-- BG: blue beat-up car (drawn before Landlady so she occludes left edge) -->
+    <rect x="490" y="820" width="240" height="100" fill="#a8c0d4" stroke="black" stroke-width="1.5"/>
+    <rect x="505" y="832" width="210" height="26" fill="#cdd6e0" stroke="black" stroke-width="0.8"/>
+    <circle cx="525" cy="920" r="13" fill="#666" stroke="black" stroke-width="1"/>
+    <circle cx="700" cy="920" r="13" fill="#666" stroke="black" stroke-width="1"/>
+    <text x="495" y="945" font-size="10" fill="#333">blue beat-up car (in BG of exchange)</text>
+
+    <!-- FG: 4 large jars (drawn before captions and table so captions occlude tops; table occludes bottoms) -->
+    <rect x="40" y="720" width="60" height="200" fill="white" stroke="black" stroke-width="1.5"/>
+    <rect x="115" y="720" width="60" height="200" fill="white" stroke="black" stroke-width="1.5"/>
+    <rect x="190" y="720" width="60" height="200" fill="white" stroke="black" stroke-width="1.5"/>
+    <rect x="265" y="720" width="60" height="200" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="155" y="710" font-size="12" font-weight="bold" fill="#000">jars ×4</text>
+
+    <!-- Chuck pill (~73% panel height) -->
+    <rect x="395" y="675" width="55" height="274" rx="27" ry="27" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="402" y="940" font-size="11" font-weight="bold" fill="#000">CHUCK</text>
+
+    <!-- Keys (between Chuck and Landlady at chest height) -->
+    <rect x="461" y="800" width="14" height="22" fill="white" stroke="black" stroke-width="1.2"/>
+    <circle cx="468" cy="797" r="3" fill="white" stroke="black" stroke-width="1"/>
+
+    <!-- Landlady pill (drawn AFTER car so she occludes its left end; ~67% panel height) -->
+    <rect x="485" y="700" width="50" height="249" rx="25" ry="25" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="488" y="940" font-size="9" font-weight="bold" fill="#000">LANDLADY</text>
+
+    <!-- Caption box 1 (drawn last so it occludes jars + Chuck/Landlady tops) -->
+    <rect x="45" y="625" width="225" height="80" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="58" y="650" font-family="Georgia" font-size="13">Turns out they were crashing</text>
+    <text x="58" y="667" font-family="Georgia" font-size="13">the place. Chuck sweet-talked</text>
+    <text x="58" y="684" font-family="Georgia" font-size="13">the landlady — gave her a car.</text>
+
+    <!-- Caption box 2 -->
+    <rect x="45" y="715" width="225" height="55" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="58" y="737" font-family="Georgia" font-size="13">He'd do what he had to</text>
+    <text x="58" y="754" font-family="Georgia" font-size="13">to keep the thing going.</text>
+
+    <!-- Table under the jars (drawn last so it occludes jar bottoms) -->
+    <rect x="30" y="920" width="320" height="30" fill="#dcdcdc" stroke="black" stroke-width="1.5"/>
+    <text x="120" y="965" font-size="10" fill="#333">table (FG, dominant)</text>
+  </g>
+
+  <!-- ===== Panel 3: depth, sunset ===== -->
+  <g id="panel-3">
+    <text x="780" y="618" font-size="13" font-weight="bold" fill="#000">P3 — depth, sunset</text>
+
+    <!-- Sun on horizon (between Billy and Mike) -->
+    <circle cx="1115" cy="765" r="20" fill="#fbe5b8" stroke="black" stroke-width="1.2"/>
+    <text x="1093" y="752" font-size="9" fill="#333">sun</text>
+
+    <!-- Road: trapezoid extending to vanishing point at sun -->
+    <path d="M 820 975 L 1400 975 L 1145 765 L 1085 765 Z"
+          fill="#e0d4c0" stroke="black" stroke-width="1.3"/>
+
+    <!-- Telephone pole (far right) -->
+    <rect x="1430" y="660" width="6" height="220" fill="#444" stroke="black" stroke-width="1"/>
+    <line x1="1413" y1="690" x2="1450" y2="690" stroke="black" stroke-width="1.2"/>
+    <line x1="1433" y1="695" x2="1475" y2="715" stroke="black" stroke-width="1"/>
+    <line x1="1433" y1="695" x2="1300" y2="725" stroke="black" stroke-width="1"/>
+    <text x="1395" y="654" font-size="9" fill="#333">telephone pole</text>
+
+    <!-- Billy pill (taller, left; ~60% panel height) -->
+    <rect x="1075" y="731" width="40" height="225" rx="20" ry="20" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="1080" y="947" font-size="11" font-weight="bold" fill="#000">BILLY</text>
+
+    <!-- Mike pill (avg, right; ~55% panel height) -->
+    <rect x="1140" y="755" width="36" height="201" rx="18" ry="18" fill="white" stroke="black" stroke-width="1.5"/>
+    <text x="1144" y="947" font-size="11" font-weight="bold" fill="#000">MIKE</text>
+
+    <!-- Caption top-left (drawn after road so it occludes any overlap) -->
+    <rect x="780" y="625" width="245" height="115" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="793" y="650" font-family="Georgia" font-size="13">Billy was tightly knit with</text>
+    <text x="793" y="667" font-family="Georgia" font-size="13">Evan Engber's commune</text>
+    <text x="793" y="684" font-family="Georgia" font-size="13">experiment off of Old</text>
+    <text x="793" y="701" font-family="Georgia" font-size="13">Topanga Canyon Road.</text>
+
+    <!-- Caption bottom-right -->
+    <rect x="1280" y="890" width="190" height="70" fill="white" stroke="black" stroke-width="1.5" rx="4" ry="4"/>
+    <text x="1293" y="915" font-family="Georgia" font-size="13">We were all trying</text>
+    <text x="1293" y="932" font-family="Georgia" font-size="13">something.</text>
+  </g>
+
+</svg>
